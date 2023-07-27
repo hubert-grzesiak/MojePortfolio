@@ -4,9 +4,6 @@ import "@styles/Animation.scss";
 import "@styles/Post.css";
 import Head from "next/head";
 import Navbar from "@components/Navbar.jsx";
-import Animation from "@components/Animation";
-import { useEffect, useState } from "react";
-import { useHistory } from "next";
 export const metadata = {
   title: "Hubert Grzesiak",
   description: "My Portfolio",
