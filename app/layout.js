@@ -1,4 +1,3 @@
-"use client";
 import "@styles/Navbar.css";
 import "@styles/globals.css";
 import "@styles/Animation.scss";
