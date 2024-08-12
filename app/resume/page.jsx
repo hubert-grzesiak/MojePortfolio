@@ -1,10 +1,10 @@
 import React from "react";
-import "@styles/cv.css";
+import "@styles/resume.css";
 import Image from "next/image";
 import Post from "@components/post/Post";
 import Divider from "@components/Divider";
 
-const CV = () => {
+const Resume = () => {
   return (
     <div className="kontener text-sm lg:text-base mx-auto">
       <div className="links">
@@ -184,4 +184,4 @@ const CV = () => {
     </div>
   );
 };
-export default CV;
+export default Resume;

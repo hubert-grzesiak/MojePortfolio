@@ -15,13 +15,13 @@ const Navbar = () => {
         Home
       </Link>
       <Link
-        href="/cv"
+        href="/resume"
         className={cn(
           "nav-item is-active",
-          pathname === "/cv" && "item-active"
+          pathname === "/resume" && "item-active"
         )}
         active-color="green">
-        CV
+        Resume
       </Link>
       <Link
         href="/projects"
