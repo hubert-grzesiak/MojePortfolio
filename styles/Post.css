@@ -1,85 +1,87 @@
 .post {
-    padding: 27px 34px 11px 34px;
-    background-color:#FFF;
-    border-radius: 20px;
-    -webkit-box-shadow: 0px 8px 17px -11px rgba(66, 68, 90, 1);
-    -moz-box-shadow: 0px 8px 17px -11px rgba(66, 68, 90, 1);
-    box-shadow: 0px 8px 17px -11px rgba(66, 68, 90, 1);
-    margin-bottom: 13px;
+  padding: 27px 34px 11px 34px;
+  background-color: #fff;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 8px 17px -11px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 0px 8px 17px -11px rgba(66, 68, 90, 1);
+  box-shadow: 0px 8px 17px -11px rgba(66, 68, 90, 1);
+  margin-bottom: 12px;
 }
 
 .post-top {
-    display: flex;
+  display: flex;
 }
 
 .post-top-data {
-    margin-left: 14px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items:flex-start;
+  margin-left: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 .job-data {
-    display: flex;
-    align-items: center;
-    color: #636468;
-font-family: sans-serif;
-font-weight: lighter;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-}
-.experience {
-    color: #000;
-font-family: Helvetica;
-font-size: 24px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
+  display: flex;
+  align-items: center;
+  color: #636468;
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
-.interactive {
-    display: flex;
-    justify-content: space-around;
+.experience {
+  color: #000;
+  font-family: Helvetica;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .post-bottom {
-    display: flex;
-    gap: 10px;
-    margin: 12px 0;
+  display: flex;
+  gap: 10px;
+  margin: 12px 0;
 }
-.like, .comment, .share {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 5px;
-    color: #636468;
-font-family: Helvetica;
-font-size: 15px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-
+.like,
+.comment,
+.share {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #636468;
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
-.write-comment{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color:#F1F2F6; 
-    height: 37px;
-    padding: 8px 17px;
-    border-radius: 20px;
-    color: #636468;
-font-family: Helvetica;
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-
+.write-comment {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f1f2f6;
+  height: 37px;
+  padding: 20px 15px;
+  border-radius: 20px;
+  color: #636468;
+  font-family: Helvetica;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
-.description {
-    margin: 10px 0 10px 0;
+@media screen and (max-width: 768px) {
+  .job-data {
+    font-size: 12px;
+  }
+  .experience {
+    font-size: 20px;
+  }
+  .write-comment {
+    font-size: 14px;
+  }
 }

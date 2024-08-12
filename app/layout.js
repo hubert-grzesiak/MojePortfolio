@@ -26,7 +26,7 @@ const RootLayout = ({ children }) => (
       </div>
       <main className="app">
         <Navbar />
-        <div className="delay"> {children}</div>
+        {children}
       </main>
     </body>
   </html>
