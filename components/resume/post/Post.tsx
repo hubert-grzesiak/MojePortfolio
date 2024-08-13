@@ -12,6 +12,14 @@ const Post = ({
   description,
   image,
   imageClassName,
+}: {
+  company: string;
+  location: string;
+  jobTitle: string;
+  date: string;
+  description: string;
+  image: string;
+  imageClassName?: string;
 }) => {
   return (
     <>

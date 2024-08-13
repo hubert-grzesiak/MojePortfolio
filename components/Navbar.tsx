@@ -41,6 +41,15 @@ const Navbar = () => {
         active-color="rebeccapurple">
         Contact
       </Link>
+      <Link
+        href="/blog"
+        className={cn(
+          "nav-item is-active",
+          pathname === "/blog" && "item-active"
+        )}
+        active-color="rebeccapurple">
+        Blog
+      </Link>
       <span className="nav-indicator"></span>
     </nav>
   );

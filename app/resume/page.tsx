@@ -1,7 +1,7 @@
 import React from "react";
 import "@styles/resume.css";
 import Image from "next/image";
-import Post from "@components/post/Post";
+import Post from "@components/resume/post/Post";
 import Divider from "@components/Divider";
 
 const Resume = () => {
