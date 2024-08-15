@@ -25,6 +25,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://hubertgrzesiak.com",
     siteName: "Hubert Grzesiak",
+    images: "https://hubertgrzesiak.com/opengraph-image.png",
   },
 };
 const inter = Inter({ subsets: ["latin"] });
