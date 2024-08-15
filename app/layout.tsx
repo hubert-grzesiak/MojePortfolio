@@ -5,6 +5,7 @@ import "@styles/Post.css";
 import type { Metadata } from "next";
 import Navbar from "@components/Navbar";
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Hubert Grzesiak - Frontend Developer",
@@ -40,6 +41,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
       <main className="app">
         <Navbar />
         {children}
+        <Analytics />
       </main>
     </body>
   </html>
