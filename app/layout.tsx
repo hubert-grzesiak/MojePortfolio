@@ -25,14 +25,6 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://hubertgrzesiak.com",
     siteName: "Hubert Grzesiak",
-    images: [
-      {
-        url: "https://hubertgrzesiak.com/opengraph-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Hubert Grzesiak - Frontend Developer",
-      },
-    ],
   },
 };
 const inter = Inter({ subsets: ["latin"] });
