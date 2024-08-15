@@ -3,9 +3,9 @@ import "@styles/globals.css";
 import "@styles/Animation.scss";
 import "@styles/Post.css";
 import type { Metadata } from "next";
-import Navbar from "@components/Navbar";
-import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import { Poppins } from "next/font/google";
+import { cn } from "@lib/utils";
 
 export const metadata: Metadata = {
   title: "Hubert Grzesiak - Frontend Developer",
@@ -30,19 +30,17 @@ export const metadata: Metadata = {
     images: "https://hubertgrzesiak.com/opengraph-image.png",
   },
 };
-const inter = Inter({ subsets: ["latin"] });
+
+export const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang="pl">
-    <body className={inter.className}>
-      <div className="main">
-        <div className="gradient" />
-      </div>
-      <main className="app">
-        <Navbar />
-        {children}
-        <Analytics />
-      </main>
+    <body className={cn(poppins.className, "antialiased")}>
+      {children}
+      <Analytics />
     </body>
   </html>
 );
