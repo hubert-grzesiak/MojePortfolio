@@ -1,11 +1,11 @@
-import React from "react";
+import Hero from "@components/home/sections/Hero";
 
-const page = () => {
+const Page = () => {
   return (
-    <div>
-      <h1>Welcome to my website!</h1>
-    </div>
+    <main className="w-full">
+      <Hero />
+    </main>
   );
 };
 
-export default page;
+export default Page;
