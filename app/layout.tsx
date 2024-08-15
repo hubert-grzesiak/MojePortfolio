@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://hubertgrzesiak.com",
   },
+  metadataBase: new URL("https://hubertgrzesiak.com/"),
   openGraph: {
     title: "Hubert Grzesiak - Frontend Developer",
     description:
