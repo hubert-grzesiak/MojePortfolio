@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { Poppins } from "next/font/google";
 import { cn } from "@lib/utils";
+import { Toaster } from "@/components/ui/sonner";
 
 export const metadata: Metadata = {
   title: "Hubert Grzesiak - Frontend Developer",
@@ -41,6 +42,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
     <body className={cn(poppins.className, "antialiased")}>
       {children}
       <Analytics />
+      <Toaster />
     </body>
   </html>
 );
