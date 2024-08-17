@@ -62,10 +62,21 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      boxShadow: {
+        customShadow: "0 5px 20px 0 #0000001A",
+        serviceShadow: "0px 1px 20px 0px #E0ECFF",
+        serviceIconShadow: "10px 10px 26px 0px #0252CD47",
+        workShadow: "0px 10px 66px 0px #00000012",
+        jobShadow: "-25px 47px 66px 0px #00000014",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      backgroundImage: {
+        "gradient-custom":
+          "linear-gradient(180deg, #EF93F9 100%, #C168F6 100%)",
       },
       keyframes: {
         "accordion-down": {

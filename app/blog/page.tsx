@@ -2,8 +2,8 @@ import Posts from "@components/blog/Posts";
 
 const Page = () => {
   return (
-    <main className="px-6 mx-auto max-w-[1400px] bg-white/40 backdrop-blur-[32px] w-full rounded-lg shadow-md p-10 mt-10">
-      <p className="mt-12 mb-12 text-3xl text-center">
+    <main className="mx-auto mt-10 w-full max-w-[1400px] rounded-lg bg-white/40 p-10 px-6 shadow-md backdrop-blur-[32px]">
+      <p className="mb-12 mt-12 text-center text-3xl">
         Hello and Welcome 👋&nbsp;
         <span className="whitespace-nowrap">
           I&apos;m <span className="font-bold">Hubert</span>.
