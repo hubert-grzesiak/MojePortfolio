@@ -24,6 +24,11 @@ const FeaturedProjects = () => {
             technologies={["Next.js", "Tailwind CSS", "Node.js", "MongoDB"]}
             className="bg-[#0BAB7C]"
           />
+          <ProjectCard
+            title="Restly - A Stay <br/>Booking App"
+            technologies={["Next.js", "Tailwind CSS", "Node.js", "MongoDB"]}
+            className="bg-[#FF6934]"
+          />
           <Button className="mx-auto h-auto w-full max-w-[323px] rounded-full bg-primary-light px-3 py-5 hover:bg-primary-light/90">
             <Typography className="text-center text-[18px] font-semibold leading-[29px] text-white-900">
               See more case studies
