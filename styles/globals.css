@@ -67,3 +67,30 @@
     @apply bg-background text-foreground;
   }
 }
+.text-gradient {
+  @apply bg-gradient-to-r from-[#EF93F9] to-[#C168F6] bg-clip-text text-transparent;
+}
+
+.highlighted-text {
+  background: linear-gradient(to right, #ef93f9, #c168f6);
+  background-size: 100% 28px;
+  background-repeat: no-repeat;
+  background-position: 0 93%;
+  padding: 0 2px;
+}
+
+.highlighted-text-skill {
+  background: linear-gradient(to right, #ef93f9, #c168f6);
+  background-size: 100% 15px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  padding: 0 2px;
+}
+
+.highlighted-text-service {
+  background: linear-gradient(to right, #ef93f9, #c168f6);
+  background-size: 100% 15px;
+  background-repeat: no-repeat;
+  background-position: 0 90%;
+  padding: 0 2px;
+}

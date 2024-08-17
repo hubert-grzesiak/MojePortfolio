@@ -3,23 +3,27 @@ import LogoBlack from "../../../public/images/logo-black.png";
 import Image from "next/image";
 import Typography from "./Typography";
 import { cn } from "@lib/utils";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import ResumeButton from "./ResumeButton";
+import ThemeSwitcher from "./ThemeSwitcher";
 
-const Navbar = () => {
+const Navbar = ({ className }: { className?: string }) => {
   const pathname = usePathname();
-
+  const router = useRouter();
   return (
-    <div className="sticky top-0 flex w-full items-center justify-between">
+    <div className={cn("flex w-full items-center justify-between", className)}>
       <Image
         src={LogoBlack}
         alt="Hubert Grzesiak logo"
-        className="h-[48px] w-[48px] shrink-0"
+        className="h-[48px] w-[48px] shrink-0 hover:cursor-pointer"
+        onClick={() => router.push("/")}
       />
-      <div className="text-white-500 flex max-h-[24px] gap-9">
+
+      <div className="flex max-h-[24px] gap-9 text-white-500">
         <a href="/">
           <Typography
             variant={pathname === "/" ? "small-bold" : "small-regular"}
-            className={cn(pathname === "/" && "text-blue-500")}
+            className={cn(pathname === "/" && "text-gradient")}
           >
             Home
           </Typography>
@@ -29,7 +33,7 @@ const Navbar = () => {
             variant={
               pathname === "/case-studies" ? "small-bold" : "small-regular"
             }
-            className={cn(pathname === "/case-studies" && "text-blue-500")}
+            className={cn(pathname === "/case-studies" && "text-gradient")}
           >
             Case Studies
           </Typography>
@@ -37,11 +41,14 @@ const Navbar = () => {
         <a href="/contact">
           <Typography
             variant={pathname === "/contact" ? "small-bold" : "small-regular"}
-            className={cn(pathname === "/contact" && "text-blue-500")}
+            className={cn(pathname === "/contact" && "text-gradient")}
           >
             Contact
           </Typography>
         </a>
+        <ResumeButton />
+        <div className="h-[24px] w-[1px] bg-white-500" />
+        <ThemeSwitcher />
       </div>
     </div>
   );

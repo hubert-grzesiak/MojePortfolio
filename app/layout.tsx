@@ -7,6 +7,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { Poppins } from "next/font/google";
 import { cn } from "@lib/utils";
 import { Toaster } from "@/components/ui/sonner";
+import Footer from "@components/home/sections/Footer";
 
 export const metadata: Metadata = {
   title: "Hubert Grzesiak - Frontend Developer",
@@ -43,6 +44,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
       {children}
       <Analytics />
       <Toaster />
+      <Footer />
     </body>
   </html>
 );
