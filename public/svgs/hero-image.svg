@@ -168,12 +168,12 @@
 <path d="M617.48 171.527C617.48 173.508 615.836 175.11 613.813 175.11C611.79 175.11 610.188 173.508 610.188 171.527C610.188 169.546 611.79 167.986 613.813 167.986C615.836 167.986 617.48 169.546 617.48 171.527Z" fill="#C7CBE2"/>
 <defs>
 <linearGradient id="paint0_linear_8377_22012" x1="371.487" y1="0.863436" x2="493.71" y2="0.863436" gradientUnits="userSpaceOnUse">
-<stop stop-color="#EF93F9"/>
-<stop offset="1" stop-color="#C168F6"/>
+<stop stop-color="#fea92e"/>
+<stop offset="1" stop-color="#fea92e"/>
 </linearGradient>
 <linearGradient id="paint1_linear_8377_22012" x1="79.7094" y1="4.61146" x2="132.786" y2="4.61146" gradientUnits="userSpaceOnUse">
-<stop stop-color="#EF93F9"/>
-<stop offset="1" stop-color="#C168F6"/>
+<stop stop-color="#fea92e"/>
+<stop offset="1" stop-color="#fea92e"/>
 </linearGradient>
 <linearGradient id="paint2_linear_8377_22012" x1="368.998" y1="416.52" x2="369.271" y2="416.52" gradientUnits="userSpaceOnUse">
 <stop stop-color="white"/>

@@ -68,11 +68,11 @@
   }
 }
 .text-gradient {
-  @apply bg-gradient-to-r from-[#EF93F9] to-[#C168F6] bg-clip-text text-transparent;
+  @apply text-[#fea92e];
 }
 
 .highlighted-text {
-  background: linear-gradient(to right, #ef93f9, #c168f6);
+  background: linear-gradient(to right, #fea92e, #fea92e);
   background-size: 100% 28px;
   background-repeat: no-repeat;
   background-position: 0 93%;
@@ -80,7 +80,7 @@
 }
 
 .highlighted-text-skill {
-  background: linear-gradient(to right, #ef93f9, #c168f6);
+  background: linear-gradient(to right, #fea92e, #fea92e);
   background-size: 100% 15px;
   background-repeat: no-repeat;
   background-position: 0 100%;
@@ -88,9 +88,67 @@
 }
 
 .highlighted-text-service {
-  background: linear-gradient(to right, #ef93f9, #c168f6);
+  background: linear-gradient(to right, #fea92e, #fea92e);
   background-size: 100% 15px;
   background-repeat: no-repeat;
   background-position: 0 90%;
   padding: 0 2px;
+}
+
+.animated-text {
+  font-weight: bold;
+  position: relative;
+  padding: 0;
+}
+
+.animated-text:after {
+  content: attr(data-h2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: transparent;
+  background: repeating-linear-gradient(
+    -45deg,
+    #71b7e6,
+    #69a6ce,
+    #b98acc,
+    #ee8176,
+    #b98acc,
+    #69a6ce,
+    #9b59b6
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400%;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.25);
+  animation: animateTextBackground 10s ease-in-out infinite;
+}
+@keyframes animateTextBackground {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0 100%;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@layer utilities {
+  .mainPhotoLightDim {
+    @apply bg-gradient-to-l from-transparent to-[#f3f8ff];
+  }
+
+  .dark .mainPhotoDarkDim {
+    @apply bg-gradient-to-l from-transparent to-[#192333];
+  }
 }

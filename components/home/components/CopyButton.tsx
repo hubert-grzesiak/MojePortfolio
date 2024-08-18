@@ -9,7 +9,7 @@ const CopyButton = () => {
   return (
     <Typography
       as="div"
-      className="flex h-[69px] items-center gap-[18px] rounded-[9000px] bg-white-900 px-6 py-5 font-semibold text-white-500"
+      className="flex h-[69px] items-center gap-[18px] rounded-[9000px] bg-white-900 px-6 py-5 font-semibold text-white-500 dark:bg-black-200 dark:text-white-900 md:text-[16px] lg:text-[18px]"
     >
       <div>hubertgrzesiak.dev@gmail.com</div>
       <Image

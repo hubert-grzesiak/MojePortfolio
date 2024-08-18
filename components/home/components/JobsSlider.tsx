@@ -7,7 +7,7 @@ const JobsSlider = ({ className }: { className: string }) => {
   const count = useCounterStore((state) => state.count);
   const setCount = useCounterStore((state) => state.setCount);
   return (
-    <div className={cn(className)}>
+    <div className={cn("h-[25px]", className)}>
       <Slider
         value={[count]}
         max={2}

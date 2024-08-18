@@ -2,19 +2,19 @@
 import { useCounterStore } from "@app/store";
 import ExperienceDescriptionCard from "../components/ExperienceDescriptionCard";
 import JobCard from "../components/JobCard";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@components/ui/tabs";
+import { Tabs, TabsList, TabsContent } from "@components/ui/tabs";
 
 const WorkExperience = () => {
   const value = useCounterStore((state) => state.count);
   const setCount = useCounterStore((state) => state.setCount);
 
   return (
-    <section className="w-full bg-white-900 py-[72px]">
-      <div className="mx-auto w-full max-w-[1400px]">
+    <section className="w-full bg-white-900 py-[72px] dark:bg-black-200">
+      <div className="mx-auto w-full max-w-[1400px] md:px-[30px]">
         <Tabs
           value={value.toString()}
           onValueChange={(val) => setCount(parseInt(val))}
-          className="flex w-full gap-[26px]"
+          className="flex w-full md:gap-5 lg:gap-[26px]"
         >
           <div className="w-1/2">
             <TabsContent value="0">

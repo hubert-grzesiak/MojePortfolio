@@ -1,11 +1,9 @@
 "use client";
 import Link from "next/link";
 import "../styles/not-found.css";
-import Navbar from "@components/home/components/Navbar";
 const NotFound = () => {
   return (
     <div className="relative h-full w-full max-w-[1400px]">
-      <Navbar className="absolute top-[36px]" />
       <div className="container-error-page">
         <div className="error-page">
           <div>
