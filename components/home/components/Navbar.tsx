@@ -17,7 +17,7 @@ const Navbar = ({ className }: { className?: string }) => {
         className,
       )}
     >
-      <div className="mx-auto flex items-center justify-between px-6 md:px-[30px] lg:max-w-[1400px]">
+      <div className="mx-auto flex items-center justify-between px-6 md:px-[30px] lg:max-w-[1270px]">
         <Image
           src={LogoBlack}
           alt="Hubert Grzesiak logo"

@@ -22,7 +22,7 @@ export const serviceData = [
     icon: BackendIcon,
     title: "Back-End Dev ",
     description:
-      "Develop server-side logic, databases, and APIs for secure, scalable, and efficient applications.",
+      "Develop server-side logic, databases, and APIs for secure and scalable applications.",
   },
   {
     icon: OptimazationIcon,

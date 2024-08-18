@@ -17,7 +17,7 @@ const ServiceCard: FC<ServiceCardProps> = ({
   return (
     <div
       className={cn(
-        "dark:shadow-serviceDarkShadow group w-full rounded-[10px] p-[25px] shadow-serviceShadow md:h-[239px] md:max-w-[450px] lg:h-[265px] lg:max-w-[300px]",
+        "group w-full rounded-[10px] p-[25px] shadow-serviceShadow dark:shadow-serviceDarkShadow md:h-[239px] md:max-w-[450px] lg:h-[265px] lg:max-w-[288px]",
         "hover:scale-105 hover:bg-primary-light dark:hover:bg-primary-dark",
         "transition-transform duration-300 ease-in-out",
         "bg-[#F3F8FF] dark:bg-black-300",

@@ -8,7 +8,7 @@ import { Tooltip } from "react-tooltip";
 const Skills = () => {
   return (
     <section className="w-full bg-white-900 py-[72px] dark:bg-black-200">
-      <div className="mx-auto flex w-full max-w-[1400px] flex-col md:gap-10 md:px-[30px]">
+      <div className="mx-auto flex w-full max-w-[1270px] flex-col md:gap-10 md:px-[30px]">
         <Typography
           as="h2"
           className="highlighted-text-skill mx-auto w-full max-w-[207px] font-bold dark:text-white-900"

@@ -6,7 +6,7 @@ import { ButtonArrow } from "../components/icons";
 const FeaturedProjects = () => {
   return (
     <section className="w-full bg-white-900 py-[72px] dark:bg-black-200">
-      <div className="mx-auto w-full max-w-[1400px] md:px-[30px]">
+      <div className="mx-auto w-full max-w-[1270px] md:px-[30px]">
         <Typography
           as="h2"
           className="mx-auto mb-10 w-full font-bold dark:text-white-900"
