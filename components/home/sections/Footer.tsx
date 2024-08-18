@@ -6,7 +6,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
     <footer className="bg-white-900 py-[52px] dark:bg-black-200 md:px-[30px]">
-      <div className="mx-auto flex w-full max-w-[1400px] justify-between border-t border-white-800 pt-8 dark:border-black-300">
+      <div className="mx-auto flex w-full max-w-[1270px] justify-between border-t border-white-800 pt-8 dark:border-black-300">
         <Typography variant={"body-regular"} className="text-black-400">
           © {currentYear} Hubert Grzesiak. All rights reserved.
         </Typography>

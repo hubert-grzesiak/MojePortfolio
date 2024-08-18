@@ -25,7 +25,7 @@ const CarouselCard: FC<Props> = ({
   return (
     <div
       className={cn(
-        "flex h-[328px] w-full items-center justify-center gap-[26px] bg-white-800 dark:bg-black-300",
+        "flex h-[328px] items-center justify-center bg-white-800 dark:bg-black-300 md:gap-[20px] lg:max-w-[1137px] lg:gap-[26px]",
         className,
       )}
     >
@@ -42,7 +42,7 @@ const CarouselCard: FC<Props> = ({
             <StarIcon key={index} />
           ))}
         </div>
-        <Typography className="mb-8 leading-[31px] text-white-500 dark:text-white-800 md:text-[20px] md:leading-[30px] lg:text-[24px]">
+        <Typography className="leading-[31px] text-white-500 dark:text-white-800 md:mb-6 md:text-[20px] md:leading-[30px] lg:mb-8 lg:text-[24px]">
           {description}
         </Typography>
         <Typography className="mb-1 text-[18px] font-semibold leading-[29px] text-black-300 dark:text-white-900">

@@ -5,8 +5,8 @@ import { serviceData } from "./data";
 
 const Service = () => {
   return (
-    <section className="w-full bg-white-800 py-[72px] dark:bg-black-300">
-      <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-10 px-[30px]">
+    <section className="w-full bg-white-800 py-[72px] dark:bg-black-300 md:px-[30px]">
+      <div className="mx-auto flex w-full max-w-[1270px] flex-col gap-10">
         <Typography
           as="h2"
           className="mx-auto w-full font-bold dark:text-white-900"
@@ -15,7 +15,7 @@ const Service = () => {
           What <span className="highlighted-text-service">service</span> do I
           provide
         </Typography>
-        <div className="flex w-full flex-wrap justify-center gap-[43px]">
+        <div className="flex w-full flex-wrap justify-center md:gap-[32px]">
           {serviceData.map((item) => {
             const Icon = item.icon;
             return (

@@ -7,13 +7,13 @@ import { ButtonArrow } from "../components/icons";
 const GetInTouch = () => {
   return (
     <section className="w-full bg-white-900 py-[72px] dark:bg-black-200 md:px-[30px]">
-      <div className="relative mx-auto w-full max-w-[1400px] md:px-[36px] md:py-[56px] lg:px-[70px] lg:py-[82px]">
+      <div className="relative mx-auto w-full max-w-[1270px] md:px-[36px] md:py-[56px] lg:px-[70px] lg:py-[82px]">
         <div className="absolute inset-0 z-0">
           <Image
             src={ctaImage}
             alt="Get in touch"
             fill
-            className="max-w-[1399px]:max-w-[1064px] rounded-[20px] object-cover lg:max-w-[1400px]"
+            className="max-w-[1399px]:max-w-[1064px] rounded-[20px] object-cover lg:max-w-[1270px]"
           />
         </div>
         <div className="relative z-10 flex h-full w-full items-end justify-between">

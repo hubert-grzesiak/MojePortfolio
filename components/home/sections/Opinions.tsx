@@ -14,15 +14,15 @@ import kacperPhoto from "../../../public/images/opinions/kacper.webp";
 
 const Opinions = () => {
   return (
-    <section className="w-full bg-white-800 py-[72px] dark:bg-black-300">
-      <div className="mx-auto flex w-full max-w-[1400px] flex-col items-center gap-[64px] md:px-[30px]">
+    <section className="w-full bg-white-800 py-[72px] dark:bg-black-300 lg:px-[30px]">
+      <div className="mx-auto flex w-full max-w-[1270px] flex-col items-center gap-[64px]">
         <Typography as="h2" className="mx-auto w-full font-bold" variant={"h2"}>
           What <span className="highlighted-text-service">they say</span> about
           me
         </Typography>
-        <div className="flex w-full justify-center md:max-w-[900pxpx] lg:max-w-[1267px]">
-          <Carousel>
-            <CarouselContent>
+        <div className="flex w-full justify-center md:mx-[30px]">
+          <Carousel className="relative w-full px-[64px]">
+            <CarouselContent className="lg:max-w-[1137px]">
               <CarouselItem>
                 <CarouselCard
                   jobTitle="Full Stack Developer"
@@ -48,8 +48,8 @@ const Opinions = () => {
                 />
               </CarouselItem>
             </CarouselContent>
-            <CarouselPrevious className="hidden lg:flex" />
-            <CarouselNext className="hidden lg:flex" />
+            <CarouselPrevious className="absolute md:right-[96px] md:top-0 md:translate-y-[-35px] lg:left-0 lg:top-1/2" />
+            <CarouselNext className="absolute md:right-[30px] md:top-0 md:translate-y-[-35px] lg:right-0 lg:top-1/2" />
           </Carousel>
         </div>
       </div>

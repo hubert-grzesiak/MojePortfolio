@@ -10,7 +10,7 @@ const WorkExperience = () => {
 
   return (
     <section className="w-full bg-white-900 py-[72px] dark:bg-black-200">
-      <div className="mx-auto w-full max-w-[1400px] md:px-[30px]">
+      <div className="mx-auto w-full max-w-[1270px] md:px-[30px]">
         <Tabs
           value={value.toString()}
           onValueChange={(val) => setCount(parseInt(val))}

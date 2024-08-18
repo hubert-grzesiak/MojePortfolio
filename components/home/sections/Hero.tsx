@@ -13,7 +13,7 @@ const Hero = ({ className }: { className?: string }) => {
         className,
       )}
     >
-      <div className="relative mx-auto flex w-full max-w-[1400px] items-center md:mb-[37px] md:pl-[30px] md:pt-[114px] lg:mb-[43px] lg:pt-[119px]">
+      <div className="relative mx-auto flex w-full max-w-[1270px] items-center md:mb-[37px] md:pl-[30px] md:pt-[114px] lg:mb-[43px] lg:pt-[119px]">
         <div className="w-full max-w-[580px]">
           <Typography
             as="h2"
