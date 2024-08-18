@@ -25,8 +25,10 @@ const ProjectCard: React.FC<Props> = ({
   return (
     <div
       className={cn(
-        "flex gap-9 rounded-[20px] py-[50px]",
-        variant === "main" ? "pl-[108px]" : "pr-[70px]",
+        "flex rounded-[20px] md:gap-1 md:py-[52px] lg:gap-9 lg:pb-[52px] lg:pt-[62px]",
+        variant === "main"
+          ? "md:pl-[36px] lg:pl-[108px]"
+          : "md:pr-[36px] lg:pr-[70px]",
         className,
       )}
       {...props}
@@ -34,7 +36,7 @@ const ProjectCard: React.FC<Props> = ({
       <div className="flex flex-col gap-[50px]">
         <div className="flex flex-col gap-[27px]">
           <Typography
-            className="text-[44px] !font-bold leading-[50px] tracking-[-0.44px] text-white-900"
+            className="!font-bold tracking-[-0.44px] text-white-900 md:text-[44px] md:leading-[50px] lg:text-[44px] lg:leading-[50px]"
             dangerouslySetInnerHTML={{ __html: title }}
           />
           <div className="flex gap-2.5">
@@ -43,6 +45,7 @@ const ProjectCard: React.FC<Props> = ({
                 as="div"
                 variant={"small-regular"}
                 className="rounded-[6px] bg-white/20 p-2.5 text-white-900"
+                key={tech}
               >
                 {tech}
               </Typography>
@@ -71,9 +74,13 @@ const ProjectCard: React.FC<Props> = ({
         </Link>
       </div>
       <div className="flex items-end gap-4">
-        <Image src={restlyImage} alt="restly-desktop" />
+        <Image
+          src={restlyImage}
+          alt="restly-desktop"
+          className="md:h-[230px] md:w-[437px] lg:h-[330px] lg:w-[564px]"
+        />
         {/* <Image src={restlyImage} alt="restly-mobile" className="w-[142px]" /> */}
-        <div className="h-[280px] w-[142px] bg-black" />
+        <div className="bg-black md:h-[10px] md:w-[10px] lg:h-[280px] lg:w-[142px]" />
       </div>
     </div>
   );

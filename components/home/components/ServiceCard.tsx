@@ -6,28 +6,29 @@ interface ServiceCardProps extends ComponentPropsWithoutRef<"div"> {
   icon: React.ReactNode;
   title: string;
   description: string;
-  variant?: "blue" | "default";
 }
 
 const ServiceCard: FC<ServiceCardProps> = ({
   icon,
   title,
   description,
-  variant = "default",
   className,
 }) => {
   return (
     <div
       className={cn(
-        "shadow-serviceShadow h-[265px] w-full max-w-[300px] rounded-[10px] p-[25px]",
-        variant === "blue" ? "bg-primary-light" : "bg-[#F3F8FF]",
+        "dark:shadow-serviceDarkShadow group w-full rounded-[10px] p-[25px] shadow-serviceShadow md:h-[239px] md:max-w-[450px] lg:h-[265px] lg:max-w-[300px]",
+        "hover:scale-105 hover:bg-primary-light dark:hover:bg-primary-dark",
+        "transition-transform duration-300 ease-in-out",
+        "bg-[#F3F8FF] dark:bg-black-300",
         className,
       )}
     >
       <div
         className={cn(
-          "shadow-serviceIconShadow flex h-[62px] w-[62px] items-center justify-center rounded-[10px] bg-primary-light",
-          variant === "blue" ? "bg-white-900" : "bg-primary-light",
+          "flex h-[62px] w-[62px] items-center justify-center rounded-[10px] shadow-serviceIconShadow transition-transform",
+          "group-hover:bg-white-900 dark:group-hover:text-primary-dark [&>svg>g>path]:group-hover:fill-primary-light [&>svg>g>path]:group-hover:dark:fill-primary-dark [&>svg>path]:group-hover:fill-primary-light [&>svg>path]:group-hover:dark:fill-primary-dark",
+          "bg-primary-light dark:bg-primary-dark",
         )}
       >
         {icon}
@@ -36,7 +37,8 @@ const ServiceCard: FC<ServiceCardProps> = ({
         <Typography
           className={cn(
             "text-[24px] font-semibold leading-[31px]",
-            variant === "blue" ? "text-white-900" : "text-black-200",
+            "group-hover:text-white-900",
+            "text-black-200 dark:text-white-900",
           )}
         >
           {title}
@@ -44,7 +46,8 @@ const ServiceCard: FC<ServiceCardProps> = ({
         <Typography
           variant={"small-regular"}
           className={cn(
-            variant === "blue" ? "text-[#F3F8FF]" : "text-white-500",
+            "group-hover:text-white-800",
+            "text-white-500 dark:text-white-800",
           )}
         >
           {description}

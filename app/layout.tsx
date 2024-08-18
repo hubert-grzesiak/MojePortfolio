@@ -8,6 +8,9 @@ import { Poppins } from "next/font/google";
 import { cn } from "@lib/utils";
 import { Toaster } from "@/components/ui/sonner";
 import Footer from "@components/home/sections/Footer";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Providers } from "./providers";
+import Navbar from "@components/home/components/Navbar";
 
 export const metadata: Metadata = {
   title: "Hubert Grzesiak - Frontend Developer",
@@ -38,15 +41,21 @@ export const poppins = Poppins({
   weight: ["400"],
 });
 
-const RootLayout = ({ children }: { children: React.ReactNode }) => (
-  <html lang="pl">
-    <body className={cn(poppins.className, "antialiased")}>
-      {children}
-      <Analytics />
-      <Toaster />
-      <Footer />
-    </body>
-  </html>
-);
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <html lang="pl" suppressHydrationWarning>
+      <body className={cn(poppins.className, "antialiased")}>
+        <Providers>
+          <Navbar className="pt-9" />
+          {children}
+        </Providers>
+        <Analytics />
+        <SpeedInsights />
+        <Toaster />
+        <Footer />
+      </body>
+    </html>
+  );
+};
 
 export default RootLayout;

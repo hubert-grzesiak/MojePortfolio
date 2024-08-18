@@ -1,21 +1,18 @@
 "use client";
 
 import Typography from "../components/Typography";
-import downloadIcon from "../../../public/svgs/download-icon.svg";
-import Image from "next/image";
+import { DownloadIcon } from "./icons";
 
 const ResumeButton = () => {
   return (
     <Typography
       as="div"
-      className="flex items-center gap-[3px] text-black-200"
+      className="flex items-center gap-[3px] text-black-200 dark:text-white-900"
       variant={"small-regular"}
     >
-      <Image
+      <DownloadIcon
         onClick={() => {}}
-        src={downloadIcon}
-        alt="download icon"
-        className="h-[21px] w-[21px] shrink-0 hover:cursor-pointer"
+        className="h-[21px] w-[21px] shrink-0 hover:cursor-pointer dark:[&>path]:fill-white-900"
       />
       <span>Resume</span>
     </Typography>

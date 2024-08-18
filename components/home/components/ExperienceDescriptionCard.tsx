@@ -24,31 +24,26 @@ const ExperienceDescriptionCard: FC<ExperienceCardProps> = ({
     <TabsContent
       value={value}
       className={cn(
-        "shadow-workShadow mt-0 flex h-[580px] flex-col justify-between rounded-[10px] bg-white-800 pb-9 pl-11 pr-[92px] pt-20",
+        "mt-0 flex w-full flex-col justify-between rounded-[10px] bg-white-800 shadow-workShadow dark:bg-black-300 md:h-[474px] md:max-w-[422px] md:px-5 md:pb-[33px] md:pt-[34px] lg:h-full lg:max-h-[680px] lg:min-h-[590px] lg:max-w-[607px] lg:pb-9 lg:pl-11 lg:pr-[92px] lg:pt-20",
         className,
       )}
     >
       <div>
-        <Typography className="mb-[26px] text-[48px] !font-bold leading-[55px]">
+        <Typography className="!font-bold md:mb-[24px] md:text-[44px] md:leading-[50px] md:tracking-[-0.44px] lg:mb-[26px] lg:text-[48px] lg:leading-[55px]">
           <span className="highlighted-text-service">{higlihtedText}</span>{" "}
           <span>{restText}</span>
         </Typography>
         <Typography
-          variant={"body-regular"}
           dangerouslySetInnerHTML={{ __html: description }}
-          className="text-white-500"
+          className="text-white-500 dark:text-white-800 md:text-[14px] md:leading-[21px] lg:text-[18px] lg:leading-[29px]"
         />
         <Typography
-          variant={"body-regular"}
           dangerouslySetInnerHTML={{ __html: secondDescription }}
-          className="mt-4 text-white-500"
+          className="text-white-500 dark:text-white-800 md:text-[14px] md:leading-[21px] lg:text-[18px] lg:leading-[29px]"
         />
       </div>
       <div>
-        <Typography
-          variant={"small-regular"}
-          className="mt-[68px] text-white-500"
-        >
+        <Typography className="text-white-500 dark:text-white-800 md:text-[14px] md:leading-[21px]">
           👉 Slide the bar to reveal details of my web experience.
         </Typography>
         <JobsSlider className="mt-[51px]" />

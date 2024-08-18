@@ -1,4 +1,5 @@
-import { ThemeSwitcherIcon } from "./ThemeSwitcherIcon";
+import { ThemeSwitcherSunIcon } from "./ThemeSwitcherSunIcon";
+import { ThemeSwitcherMoonIcon } from "./ThemeSwitcherMoonIcon";
 import { CSSIcon } from "./CSSIcon";
 import { ExpressIcon } from "./ExpressIcon";
 import { GithubIcon } from "./GithubIcon";
@@ -16,6 +17,9 @@ import { SEOIcon } from "./SEOIcon";
 import { FrontendIcon } from "./FrontendIcon";
 import { BackendIcon } from "./BackendIcon";
 import { OptimazationIcon } from "./OptimazationIcon";
+import { StarIcon } from "./StarIcon";
+import { ButtonArrow } from "./ButtonArrow";
+import { DownloadIcon } from "./DownloadIcon";
 
 export const skillsIcons = [
   {
@@ -73,7 +77,8 @@ export const skillsIcons = [
 ];
 
 export {
-  ThemeSwitcherIcon,
+  ThemeSwitcherSunIcon,
+  ThemeSwitcherMoonIcon,
   CSSIcon,
   ExpressIcon,
   GithubIcon,
@@ -91,4 +96,7 @@ export {
   FrontendIcon,
   BackendIcon,
   OptimazationIcon,
+  StarIcon,
+  ButtonArrow,
+  DownloadIcon,
 };

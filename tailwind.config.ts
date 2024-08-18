@@ -66,6 +66,7 @@ const config = {
         customShadow: "0 5px 20px 0 #0000001A",
         serviceShadow: "0px 1px 20px 0px #E0ECFF",
         serviceIconShadow: "10px 10px 26px 0px #0252CD47",
+        serviceDarkShadow: "0px 1px 20px 0px #1F2E48",
         workShadow: "0px 10px 66px 0px #00000012",
         jobShadow: "-25px 47px 66px 0px #00000014",
       },
