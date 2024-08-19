@@ -5,16 +5,15 @@ import { ButtonArrow } from "../components/icons";
 
 const FeaturedProjects = () => {
   return (
-    <section className="w-full bg-white-900 py-[72px] dark:bg-black-200">
+    <section className="w-full bg-white-900 px-[24px] py-[48px] dark:bg-black-200 md:px-0 md:py-[72px]">
       <div className="mx-auto w-full max-w-[1270px] md:px-[30px]">
         <Typography
           as="h2"
-          className="mx-auto mb-10 w-full font-bold dark:text-white-900"
-          variant={"h2"}
+          className="mx-auto mb-10 w-full text-[36px] !font-bold leading-[40px] dark:text-white-900 md:text-[48px] md:leading-[55px] lg:text-[48px]"
         >
           Featured <span className="highlighted-text-service">Projects</span>
         </Typography>
-        <div className="flex flex-col md:gap-9 lg:gap-12">
+        <div className="flex flex-col gap-9 lg:gap-12">
           <ProjectCard
             title="Restly - A Stay <br/>Booking App"
             technologies={["Next.js", "Tailwind CSS", "Node.js", "MongoDB"]}
