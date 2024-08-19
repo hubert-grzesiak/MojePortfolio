@@ -2,6 +2,7 @@ import { cn } from "@lib/utils";
 import React, { ComponentPropsWithoutRef, FC } from "react";
 import Typography from "../shared/Typography";
 import { TabsTrigger } from "@components/ui/tabs";
+import Image from "next/image";
 
 interface JobCardProps extends ComponentPropsWithoutRef<"div"> {
   icon?: React.ReactNode;
@@ -13,7 +14,7 @@ interface JobCardProps extends ComponentPropsWithoutRef<"div"> {
 
 const JobCard: FC<JobCardProps> = ({
   icon,
-  iconUrl,
+  iconUrl = "",
   title = "Helpfind",
   description = "Frontend Developer— August 2023 - Present",
   value,
@@ -31,7 +32,11 @@ const JobCard: FC<JobCardProps> = ({
       {icon ? (
         <div>{icon}</div>
       ) : (
-        <img src={iconUrl} className="h-[58px] w-[58px] rounded-[10px]" />
+        <Image
+          src={iconUrl}
+          className="h-[58px] w-[58px] rounded-[10px]"
+          alt={title}
+        />
       )}
       <div>
         <Typography
