@@ -7,8 +7,6 @@ import Link from "next/link";
 interface Props extends React.ComponentPropsWithoutRef<"div"> {
   title?: string;
   technologies?: string[];
-  desktopImage?: string;
-  mobileImage?: string;
   href?: string;
   variant?: "main" | "secondary";
 }
@@ -16,8 +14,6 @@ interface Props extends React.ComponentPropsWithoutRef<"div"> {
 const ProjectCard: React.FC<Props> = ({
   title,
   technologies = [],
-  desktopImage,
-  mobileImage,
   href = "/",
   className,
   variant = "main",

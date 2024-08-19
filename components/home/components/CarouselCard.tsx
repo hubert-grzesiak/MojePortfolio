@@ -1,22 +1,22 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { StarIcon } from "./icons";
 import Typography from "./Typography";
 import React, { ComponentPropsWithoutRef, FC } from "react";
 import { cn } from "@lib/utils";
+import szymonPhoto from "../../../public/images/opinions/szymon.webp";
 
 interface Props extends ComponentPropsWithoutRef<"div"> {
   imageUrl?: string;
   imageAlt?: string;
-  image?: React.ReactNode;
+  image?: string | StaticImageData;
   description?: string;
   name?: string;
   jobTitle?: string;
 }
 
 const CarouselCard: FC<Props> = ({
-  imageUrl,
   imageAlt = "",
-  image,
+  image = szymonPhoto,
   description,
   name,
   jobTitle,
@@ -30,7 +30,7 @@ const CarouselCard: FC<Props> = ({
       )}
     >
       <Image
-        src={imageUrl ? imageUrl : image}
+        src={image}
         width={328}
         height={328}
         className="h-[200px] w-[200px] self-start rounded-[16px] object-cover md:h-[328px] md:w-[328px]"
