@@ -151,4 +151,12 @@
   .dark .mainPhotoDarkDim {
     @apply bg-gradient-to-l from-transparent to-[#192333];
   }
+
+  .overlayLight {
+    @apply bg-[#0252CD]/10 backdrop-blur-[5px];
+  }
+
+  .dark .overlayDark {
+    @apply bg-[#428DFF]/10 backdrop-blur-[5px];
+  }
 }

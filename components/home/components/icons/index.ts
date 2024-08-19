@@ -20,6 +20,7 @@ import { OptimazationIcon } from "./OptimazationIcon";
 import { StarIcon } from "./StarIcon";
 import { ButtonArrow } from "./ButtonArrow";
 import { DownloadIcon } from "./DownloadIcon";
+import { HamburgerIcon } from "./HamburgerIcon";
 
 export const skillsIcons = [
   {
@@ -99,4 +100,5 @@ export {
   StarIcon,
   ButtonArrow,
   DownloadIcon,
+  HamburgerIcon,
 };

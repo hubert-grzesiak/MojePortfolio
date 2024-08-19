@@ -9,9 +9,9 @@ const CopyButton = () => {
   return (
     <Typography
       as="div"
-      className="flex h-[69px] items-center gap-[18px] rounded-[9000px] bg-white-900 px-6 py-5 font-semibold text-white-500 dark:bg-black-200 dark:text-white-900 md:text-[16px] lg:text-[18px]"
+      className="flex h-[48px] items-center justify-between rounded-[9000px] bg-white-900 px-4 py-[14px] text-[14px] font-semibold leading-[22px] text-white-500 dark:bg-black-200 dark:text-white-900 md:h-[69px] md:justify-normal md:gap-[18px] md:px-6 md:py-5 md:text-[16px] lg:text-[18px]"
     >
-      <div>hubertgrzesiak.dev@gmail.com</div>
+      <span>hubertgrzesiak.dev@gmail.com</span>
       <Image
         onClick={() => {
           navigator.clipboard.writeText("hubertgrzesiak.dev@gmail.com");
@@ -19,7 +19,7 @@ const CopyButton = () => {
         }}
         src={copyImage}
         alt="copy button"
-        className="h-[21px] w-[21px] shrink-0 hover:cursor-pointer"
+        className="h-[16px] w-[16px] shrink-0 hover:cursor-pointer md:h-[21px] md:w-[21px]"
       />
     </Typography>
   );
