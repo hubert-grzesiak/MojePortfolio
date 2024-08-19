@@ -1,6 +1,4 @@
-import "@styles/Navbar.css";
 import "@styles/globals.css";
-import "@styles/Animation.scss";
 import "@styles/Post.css";
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
