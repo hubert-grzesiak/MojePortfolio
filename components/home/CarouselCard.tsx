@@ -1,9 +1,9 @@
 import Image, { StaticImageData } from "next/image";
-import { StarIcon } from "./icons";
-import Typography from "./Typography";
+import { StarIcon } from "../icons";
+import Typography from "../shared/Typography";
 import React, { ComponentPropsWithoutRef, FC } from "react";
 import { cn } from "@lib/utils";
-import szymonPhoto from "../../../public/images/opinions/szymon.webp";
+import szymonPhoto from "../../public/images/opinions/szymon.webp";
 
 interface Props extends ComponentPropsWithoutRef<"div"> {
   imageUrl?: string;

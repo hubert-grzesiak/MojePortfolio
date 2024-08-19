@@ -1,7 +1,8 @@
 import { Button } from "@components/ui/button";
-import ProjectCard from "../components/ProjectCard";
-import Typography from "../components/Typography";
-import { ButtonArrow } from "../components/icons";
+import ProjectCard from "@components/home/ProjectCard";
+import Typography from "@components/shared/Typography";
+import { ButtonArrow } from "@components/icons";
+import Link from "next/link";
 
 const FeaturedProjects = () => {
   return (
@@ -9,7 +10,7 @@ const FeaturedProjects = () => {
       <div className="mx-auto w-full max-w-[1270px] md:px-[30px]">
         <Typography
           as="h2"
-          className="mx-auto mb-10 w-full text-[36px] !font-bold leading-[40px] dark:text-white-900 md:text-[48px] md:leading-[55px] lg:text-[48px]"
+          className="mx-auto mb-10 w-full text-center text-[36px] !font-bold leading-[40px] dark:text-white-900 md:text-[48px] md:leading-[55px] lg:text-[48px]"
         >
           Featured <span className="highlighted-text-service">Projects</span>
         </Typography>
@@ -29,12 +30,17 @@ const FeaturedProjects = () => {
             technologies={["Next.js", "Tailwind CSS", "Node.js", "MongoDB"]}
             className="bg-[#FF6934]/70"
           />
-          <Button className="mx-auto h-auto w-full max-w-[323px] rounded-full bg-primary-light px-3 py-5 hover:bg-primary-light/90 dark:bg-primary-dark">
-            <Typography className="flex items-center gap-2.5 text-center text-[18px] font-semibold leading-[29px] text-white-900">
-              See more case studies
-              <ButtonArrow />
-            </Typography>
-          </Button>
+          <Link
+            href="/case-studies"
+            className="mx-auto block w-full max-w-[323px]"
+          >
+            <Button className="h-auto w-full rounded-full bg-primary-light px-3 py-5 hover:bg-primary-light/90 dark:bg-primary-dark">
+              <Typography className="flex items-center gap-2.5 text-center text-[18px] font-semibold leading-[29px] text-white-900">
+                See more case studies
+                <ButtonArrow />
+              </Typography>
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

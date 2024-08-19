@@ -2,7 +2,6 @@ import React from "react";
 import { cva, VariantProps } from "class-variance-authority";
 import clsx from "clsx";
 
-// Definicja wariantów stylów za pomocą CVA
 const typography = cva("font-poppins", {
   variants: {
     variant: {
@@ -13,8 +12,7 @@ const typography = cva("font-poppins", {
       "base-bold": " font-semibold text-[24px] leading-[31.2px] text-left",
       "p-regular": " font-normal text-[20px] leading-[30px] text-left",
       "p-bold": " font-semibold text-[20px] leading-[26px] text-left",
-      "body-regular":
-        "font-normal lg:text-[18px] lg:leading-[28.8px] text-left",
+      "body-regular": "font-normal text-[18px] leading-[28.8px] text-left",
       "body-bold": " font-semibold text-[18px] leading-[28.8px] text-left",
       "small-regular": " font-normal text-[14px] leading-[21.7px] text-left",
       "small-bold": " font-semibold text-[14px] leading-[20.3px] text-left",

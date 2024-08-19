@@ -1,5 +1,5 @@
 import React from "react";
-import Typography from "../components/Typography";
+import Typography from "@components/shared/Typography";
 import {
   Carousel,
   CarouselContent,
@@ -7,7 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import CarouselCard from "../components/CarouselCard";
+import CarouselCard from "@components/home/CarouselCard";
 import emilyPhoto from "../../../public/images/opinions/emily.webp";
 import szymonPhoto from "../../../public/images/opinions/szymon.webp";
 import kacperPhoto from "../../../public/images/opinions/kacper.webp";

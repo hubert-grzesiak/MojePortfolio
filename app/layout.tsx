@@ -7,10 +7,10 @@ import { Analytics } from "@vercel/analytics/react";
 import { Poppins } from "next/font/google";
 import { cn } from "@lib/utils";
 import { Toaster } from "@/components/ui/sonner";
-import Footer from "@components/home/sections/Footer";
+import Footer from "@components/shared/sections/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Providers } from "./providers";
-import Navbar from "@components/home/components/Navbar";
+import Navbar from "@components/shared/Navbar";
 
 export const metadata: Metadata = {
   title: "Hubert Grzesiak - Frontend Developer",

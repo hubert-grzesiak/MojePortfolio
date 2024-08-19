@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@components/ui/button";
-import { HamburgerIcon } from "./icons";
-import LogoBlack from "../../../public/images/logo-black.png";
+import { HamburgerIcon } from "@components/icons";
+import LogoBlack from "../../public/images/logo-black.png";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import Typography from "./Typography";
 import { cn } from "@lib/utils";

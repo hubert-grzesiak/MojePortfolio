@@ -1,7 +1,7 @@
 "use client";
 import { useCounterStore } from "@app/store";
-import ExperienceDescriptionCard from "../components/ExperienceDescriptionCard";
-import JobCard from "../components/JobCard";
+import ExperienceDescriptionCard from "../ExperienceDescriptionCard";
+import JobCard from "@components/home/JobCard";
 import { Tabs, TabsList, TabsContent } from "@components/ui/tabs";
 
 const WorkExperience = () => {
