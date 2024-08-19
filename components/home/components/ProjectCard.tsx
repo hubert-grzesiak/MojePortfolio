@@ -1,7 +1,8 @@
 import { cn } from "@lib/utils";
 import Image from "next/image";
 import Typography from "./Typography";
-import restlyImage from "../../../public/images/projects/restly.png";
+import restlyImage from "../../../public/images/projects/restly.svg";
+import restlyMobileImage from "../../../public/images/projects/restly-mobile.svg";
 import Link from "next/link";
 interface Props extends React.ComponentPropsWithoutRef<"div"> {
   title?: string;
@@ -25,7 +26,7 @@ const ProjectCard: React.FC<Props> = ({
   return (
     <div
       className={cn(
-        "flex flex-col rounded-[20px] py-[46px] md:flex-row md:gap-1 md:py-[52px] lg:gap-9 lg:pb-[52px] lg:pt-[62px]",
+        "flex flex-col overflow-hidden rounded-[20px] py-[46px] md:flex-row md:gap-2 md:py-[52px] lg:gap-9 lg:pb-[52px] lg:pt-[62px]",
         variant === "main"
           ? "pl-[24px] md:pl-[36px] lg:pl-[108px]"
           : "md:pr-[36px] lg:pr-[70px]",
@@ -33,7 +34,7 @@ const ProjectCard: React.FC<Props> = ({
       )}
       {...props}
     >
-      <div className="mb-6 flex flex-col gap-[33px] md:mb-0 md:gap-[50px]">
+      <div className="mb-6 flex flex-col gap-[33px] md:mb-0 md:min-w-[420px] md:gap-[50px] lg:min-w-[450px]">
         <div className="flex flex-col gap-[27px]">
           <Typography
             className="text-[32px] !font-bold leading-[37px] tracking-[-0.44px] text-white-900 md:text-[44px] md:leading-[50px] lg:text-[44px] lg:leading-[50px]"
@@ -43,7 +44,7 @@ const ProjectCard: React.FC<Props> = ({
             {technologies.map((tech: string) => (
               <Typography
                 as="div"
-                className="rounded-[6px] bg-white/20 p-2.5 text-[12px] leading-[19px] text-white-900 md:text-[14px] md:leading-[22px]"
+                className="lg:leading-[22px rounded-[6px] bg-white/20 p-2.5 text-[12px] leading-[19px] text-white-900 md:text-[14px] md:leading-[22px] lg:text-[14px]"
                 key={tech}
               >
                 {tech}
@@ -72,14 +73,18 @@ const ProjectCard: React.FC<Props> = ({
           </Typography>
         </Link>
       </div>
-      <div className="flex items-end gap-4">
+      <div className="flex shrink-0 items-end justify-center md:justify-normal">
         <Image
           src={restlyImage}
           alt="restly-desktop"
-          className="h-[154px] w-[264px] md:h-[230px] md:w-[437px] lg:h-[330px] lg:w-[564px]"
+          className="z-[2] h-[154px] w-[264px] shrink-0 md:h-[230px] md:w-[437px] lg:h-[330px] lg:w-[564px]"
         />
-        {/* <Image src={restlyImage} alt="restly-mobile" className="w-[142px]" /> */}
-        <div className="bg-black md:h-[10px] md:w-[10px] lg:h-[280px] lg:w-[142px]" />
+
+        <Image
+          src={restlyMobileImage}
+          alt="restly-mobile"
+          className="z-[1] h-[130px] w-[65px] translate-x-[-15px] md:h-[214px] md:w-[108px] md:translate-x-[-40px] lg:h-[280px] lg:w-[142px] lg:translate-x-[-15px]"
+        />
       </div>
     </div>
   );

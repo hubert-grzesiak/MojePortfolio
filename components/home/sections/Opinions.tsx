@@ -8,7 +8,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import CarouselCard from "../components/CarouselCard";
-import alicePhoto from "../../../public/images/opinions/alice.webp";
+import emilyPhoto from "../../../public/images/opinions/emily.webp";
 import szymonPhoto from "../../../public/images/opinions/szymon.webp";
 import kacperPhoto from "../../../public/images/opinions/kacper.webp";
 
@@ -38,8 +38,8 @@ const Opinions = () => {
                 <CarouselCard
                   jobTitle="Frontend Developer"
                   description="Working with Hubert has been an incredible experience. His expertise in modern frontend technologies like ReactJS, CSS frameworks, and responsive design is second to none. Hubert is a true professional who brings creativity and precision to every project."
-                  name="Alice"
-                  image={alicePhoto}
+                  name="Emily"
+                  image={emilyPhoto}
                 />
               </CarouselItem>
               <CarouselItem>
