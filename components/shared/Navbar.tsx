@@ -1,10 +1,10 @@
 "use client";
-import LogoBlack from "../../../public/images/logo-black.png";
+import LogoBlack from "../../public/images/logo-black.png";
 import Image from "next/image";
 import Typography from "./Typography";
 import { cn } from "@lib/utils";
 import { usePathname, useRouter } from "next/navigation";
-import ResumeButton from "./ResumeButton";
+import ResumeButton from "../home/ResumeButton";
 import ThemeSwitcher from "./ThemeSwitcher";
 import MobileMenu from "./MobileMenu";
 

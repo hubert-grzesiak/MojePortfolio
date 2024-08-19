@@ -1,6 +1,6 @@
 import React from "react";
-import Typography from "../components/Typography";
-import { socials } from "../components/icons/socials";
+import Typography from "../Typography";
+import { socials } from "@components/icons/socials";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();

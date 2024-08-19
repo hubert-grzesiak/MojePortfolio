@@ -1,6 +1,6 @@
 import { cn } from "@lib/utils";
 import React, { ComponentPropsWithoutRef, FC } from "react";
-import Typography from "./Typography";
+import Typography from "../shared/Typography";
 import { TabsTrigger } from "@components/ui/tabs";
 
 interface JobCardProps extends ComponentPropsWithoutRef<"div"> {

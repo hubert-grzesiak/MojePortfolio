@@ -1,6 +1,6 @@
 "use client";
 
-import { ThemeSwitcherSunIcon, ThemeSwitcherMoonIcon } from "./icons";
+import { ThemeSwitcherSunIcon, ThemeSwitcherMoonIcon } from "../icons";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import Image from "next/image";

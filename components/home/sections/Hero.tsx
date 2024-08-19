@@ -1,6 +1,6 @@
-import Typography from "../components/Typography";
+import Typography from "../../shared/Typography";
 import Link from "next/link";
-import CopyButton from "../components/CopyButton";
+import CopyButton from "@components/home/CopyButton";
 import Image from "next/image";
 import heroImage from "../../../public/images/hero-image.png";
 import { cn } from "@lib/utils";

@@ -1,6 +1,6 @@
 import { cn } from "@lib/utils";
 import React, { ComponentPropsWithoutRef, FC } from "react";
-import Typography from "./Typography";
+import Typography from "@components/shared/Typography";
 
 interface ServiceCardProps extends ComponentPropsWithoutRef<"div"> {
   icon: React.ReactNode;

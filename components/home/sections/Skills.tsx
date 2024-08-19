@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import Typography from "../components/Typography";
-import { skillsIcons } from "../components/icons";
+import Typography from "@components/shared/Typography";
+import { skillsIcons } from "@components/icons";
 import { cn } from "@lib/utils";
 import { Tooltip } from "react-tooltip";
 
@@ -11,7 +11,7 @@ const Skills = () => {
       <div className="mx-auto flex w-full max-w-[1270px] flex-col gap-10 md:px-[30px]">
         <Typography
           as="h2"
-          className="highlighted-text-skill mx-auto w-full max-w-[155px] text-center text-[36px] !font-bold leading-[40px] dark:text-white-900 md:max-w-[207px] md:text-[48px] md:leading-[55px] lg:text-[48px]"
+          className="highlighted-text-skill mx-auto w-full max-w-[160px] text-center text-[36px] !font-bold leading-[40px] dark:text-white-900 md:max-w-[207px] md:text-[48px] md:leading-[55px] lg:text-[48px]"
         >
           My skills
         </Typography>

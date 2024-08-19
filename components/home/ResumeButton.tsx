@@ -1,7 +1,7 @@
 "use client";
 
-import Typography from "../components/Typography";
-import { DownloadIcon } from "./icons";
+import Typography from "@components/shared/Typography";
+import { DownloadIcon } from "../icons";
 
 const ResumeButton = () => {
   return (

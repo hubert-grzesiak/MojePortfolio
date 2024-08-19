@@ -3,7 +3,7 @@ import {
   FrontendIcon,
   BackendIcon,
   OptimazationIcon,
-} from "../components/icons";
+} from "@components/icons";
 
 export const serviceData = [
   {

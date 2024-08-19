@@ -1,6 +1,6 @@
 import { cn } from "@lib/utils";
 import React, { ComponentPropsWithoutRef, FC } from "react";
-import Typography from "./Typography";
+import Typography from "../shared/Typography";
 import { TabsContent } from "@components/ui/tabs";
 import JobsSlider from "./JobsSlider";
 

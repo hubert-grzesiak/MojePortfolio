@@ -4,7 +4,7 @@ import Service from "@components/home/sections/Service";
 import Skills from "@components/home/sections/Skills";
 import WorkExperience from "@components/home/sections/WorkExperience";
 import Opinions from "@components/home/sections/Opinions";
-import GetInTouch from "@components/home/sections/GetInTouch";
+import GetInTouch from "@components/shared/sections/GetInTouch";
 
 const Page = () => {
   return (

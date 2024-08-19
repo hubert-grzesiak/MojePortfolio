@@ -1,6 +1,6 @@
 import React from "react";
-import Typography from "../components/Typography";
-import ServiceCard from "../components/ServiceCard";
+import Typography from "@components/shared/Typography";
+import ServiceCard from "@components/home/ServiceCard";
 import { serviceData } from "./data";
 
 const Service = () => {

@@ -3,7 +3,7 @@ import Link from "next/link";
 import "../styles/not-found.css";
 const NotFound = () => {
   return (
-    <div className="relative h-full w-full max-w-[1270px]">
+    <div className="relative h-full w-full">
       <div className="container-error-page">
         <div className="error-page">
           <div>
