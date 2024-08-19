@@ -21,6 +21,7 @@ import { StarIcon } from "./StarIcon";
 import { ButtonArrow } from "./ButtonArrow";
 import { DownloadIcon } from "./DownloadIcon";
 import { HamburgerIcon } from "./HamburgerIcon";
+import { FaReact } from "react-icons/fa";
 
 export const skillsIcons = [
   {
@@ -29,7 +30,7 @@ export const skillsIcons = [
   },
   {
     name: "React",
-    icon: ReactIcon,
+    icon: FaReact,
   },
   {
     name: "Next.js",

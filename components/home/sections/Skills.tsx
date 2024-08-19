@@ -28,7 +28,13 @@ const Skills = () => {
                 )}
                 key={index}
               >
-                <Icon className="h-[27px] w-[27px] dark:fill-black-400 md:h-[50px] md:w-[50px]" />
+                <Icon
+                  className={cn(
+                    "h-[27px] w-[27px] md:h-[50px] md:w-[50px]",
+                    icon.name === "React" &&
+                      "h-[62px] fill-[#53C1DE] md:w-[62px]",
+                  )}
+                />
                 <Tooltip
                   id={icon.name}
                   place="top"
