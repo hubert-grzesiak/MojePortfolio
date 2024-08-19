@@ -1,9 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
-    serverComponentsExternalPackages: ["mongoose"],
-  },
   images: {
     domains: [
       "lh3.googleusercontent.com",
@@ -13,17 +9,16 @@ const nextConfig = {
     ],
   },
   webpack: (config) => {
-    return config
+    return config;
   },
   headers() {
     return [
       {
-        source: '/(.*)',
+        source: "/(.*)",
         headers: securityHeaders,
       },
     ];
   },
-  
 };
 const ContentSecurityPolicy = `
     default-src 'self';
@@ -66,4 +61,4 @@ const securityHeaders = [
   },
 ];
 
-export default nextConfig
+export default nextConfig;

@@ -2,14 +2,14 @@ import React from "react";
 import "@styles/resume.css";
 import Image from "next/image";
 import Post from "@components/resume/post/Post";
-import Divider from "@components/Divider";
+import Divider from "@components/shared/Divider";
 
 const Resume = () => {
   return (
-    <div className="kontener text-sm lg:text-base mx-auto">
+    <div className="kontener mx-auto text-sm lg:text-base">
       <div className="links">
         <div className="left-links">
-          <div className="lg:w-[72px] lg:h-[72px] relative h-[60px] w-[60px]">
+          <div className="relative h-[60px] w-[60px] lg:h-[72px] lg:w-[72px]">
             <Image
               src="https://res.cloudinary.com/dev6yhoh3/image/upload/v1690395297/assets/facebook-icon_h5ycdi.png"
               alt="facebook"
@@ -17,7 +17,7 @@ const Resume = () => {
             />
           </div>
           <div className="loupe-job">
-            <div className="lg:w-[30px] lg:h-[30px] relative h-[24px] w-[24px]">
+            <div className="relative h-[24px] w-[24px] lg:h-[30px] lg:w-[30px]">
               <Image
                 fill
                 src="https://res.cloudinary.com/dev6yhoh3/image/upload/v1690395297/assets/loupe_jwz11k.png"
@@ -28,34 +28,37 @@ const Resume = () => {
           </div>
         </div>
 
-        <div className="right-links gap-2 lg:gap-10 lg:w-full">
+        <div className="right-links gap-2 lg:w-full lg:gap-10">
           <div className="img-with-name">
-            <div className="w-[50px] h-[50px] relative rounded-full">
+            <div className="relative h-[50px] w-[50px] rounded-full">
               <Image
                 src="https://res.cloudinary.com/dev6yhoh3/image/upload/v1723471058/portfolio/3D402557-DD54-4F55-87A2-4194940B68FC_1_201_a_fz9tge.jpg"
                 fill
                 alt="picture"
-                className="object-cover shrink-0 rounded-full"
+                className="shrink-0 rounded-full object-cover"
               />
             </div>
-            <span className="name min-[500px]:block hidden">Hubert</span>
+            <span className="name hidden min-[500px]:block">Hubert</span>
           </div>
-          <div className="flex items-center lg:gap-4 gap-2">
+          <div className="flex items-center gap-2 lg:gap-4">
             <a
               target="_blank"
               rel="noopener noreferrer"
               href={"https://www.linkedin.com/in/hubertgrzesiakjs/"}
-              className="relative lg:w-[38px] lg:h-[38px] w-[30px] h-[30px]">
+              className="relative h-[30px] w-[30px] lg:h-[38px] lg:w-[38px]"
+            >
               <Image
                 src="https://res.cloudinary.com/dev6yhoh3/image/upload/v1690395297/assets/linkedin-icon_an5fd5.png"
                 fill
-                alt="linkedin"></Image>
+                alt="linkedin"
+              ></Image>
             </a>
             <a
               target="_blank"
               rel="noopener noreferrer"
               href={"https://github.com/hubert-grzesiak"}
-              className="relative lg:w-[38px] lg:h-[38px] w-[30px] h-[30px]">
+              className="relative h-[30px] w-[30px] lg:h-[38px] lg:w-[38px]"
+            >
               <Image
                 src="https://res.cloudinary.com/dev6yhoh3/image/upload/v1690395297/assets/github-icon_ym79e7.png"
                 fill
@@ -65,7 +68,7 @@ const Resume = () => {
           </div>
         </div>
       </div>
-      <div className="content flex justify-between flex-col-reverse lg:flex-row lg:gap-4 ">
+      <div className="content flex flex-col-reverse justify-between lg:flex-row lg:gap-4">
         <div className="whole-left-content-container">
           <div className="left-content">
             <div className="left-content-main-text">Programming Languages</div>
@@ -95,16 +98,16 @@ const Resume = () => {
         </div>
         <div className="right-content">
           <div className="personal-data">
-            <div className="flex items-center mb-3 gap-3">
-              <div className="w-[70px] h-[70px] relative rounded-full shrink-0">
+            <div className="mb-3 flex items-center gap-3">
+              <div className="relative h-[70px] w-[70px] shrink-0 rounded-full">
                 <Image
                   src="https://res.cloudinary.com/dev6yhoh3/image/upload/v1723471058/portfolio/3D402557-DD54-4F55-87A2-4194940B68FC_1_201_a_fz9tge.jpg"
                   fill
                   alt="picture"
-                  className="object-cover shrink-0 rounded-full"
+                  className="shrink-0 rounded-full object-cover"
                 />
               </div>
-              <div className="full-name lg:text-[24px] text-lg">
+              <div className="full-name text-lg lg:text-[24px]">
                 Hubert Grzesiak
               </div>
             </div>
@@ -114,7 +117,8 @@ const Resume = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://www.google.pl/maps/place/62-800+Kalisz/@51.74729,17.9936581,12z/data=!3m1!4b1!4m6!3m5!1s0x471ac5913393e6a7:0x719f8f40ae38aad3!8m2!3d51.7672799!4d18.0853462!16zL20vMGp4NnY?entry=ttu"
-                className="city lg:flex hidden">
+                className="city hidden lg:flex"
+              >
                 <Image
                   src="https://res.cloudinary.com/dev6yhoh3/image/upload/v1690401584/image_2_xkpupn.png"
                   width={38}
@@ -123,7 +127,7 @@ const Resume = () => {
                 />
                 <span>Kalisz</span>
               </a>
-              <div className="phone lg:flex hidden">
+              <div className="phone hidden lg:flex">
                 <Image
                   src="https://res.cloudinary.com/dev6yhoh3/image/upload/v1690401584/smartphone_hutrxc.png"
                   width={29}
@@ -132,11 +136,11 @@ const Resume = () => {
                 />
                 <span>734 667 ***</span>
               </div>
-              <a href="mailto: hubertgrzesiak.dev@gmail.com" className="email ">
-                <img
+              <a href="mailto: hubertgrzesiak.dev@gmail.com" className="email">
+                <Image
                   src="https://res.cloudinary.com/dev6yhoh3/image/upload/v1690401584/email_1_xycgv6.png"
                   alt="email"
-                  className="lg:w-[38px] lg:h-[39px] w-[30px] h-[30px]"
+                  className="h-[30px] w-[30px] lg:h-[39px] lg:w-[38px]"
                 />
                 <p>hubertgrzesiak.dev@gmail.com</p>
               </a>
