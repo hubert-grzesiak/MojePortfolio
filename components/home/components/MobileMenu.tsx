@@ -70,12 +70,18 @@ const MobileMenu = ({
                 Contact
               </Typography>
             </a>
-            <Button
-              type="submit"
-              className="mt-[12px] rounded-[100px] bg-white-800 text-[14px] font-semibold leading-[20px] tracking-wide text-[#f49818] dark:bg-black-300 hover:dark:bg-black-200"
+            <a
+              className="mt-[12px] block w-full"
+              href="/CV_EN_Hubert_Grzesiak.pdf"
+              download="CV_EN_Hubert_Grzesiak.pdf"
             >
-              Resume
-            </Button>
+              <Button
+                type="submit"
+                className="w-full rounded-[100px] bg-white-800 text-[14px] font-semibold leading-[20px] tracking-wide text-[#f49818] dark:bg-black-300 hover:dark:bg-black-200"
+              >
+                Resume
+              </Button>
+            </a>
           </div>
         </DialogContent>
       </Dialog>

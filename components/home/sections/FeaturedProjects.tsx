@@ -17,17 +17,17 @@ const FeaturedProjects = () => {
           <ProjectCard
             title="Restly - A Stay <br/>Booking App"
             technologies={["Next.js", "Tailwind CSS", "Node.js", "MongoDB"]}
-            className="bg-[#416CEA]"
+            className="bg-[#416CEA]/70"
           />
           <ProjectCard
             title="Restly - A Stay <br/>Booking App"
             technologies={["Next.js", "Tailwind CSS", "Node.js", "MongoDB"]}
-            className="bg-[#0BAB7C]"
+            className="bg-[#0BAB7C]/70"
           />
           <ProjectCard
             title="Restly - A Stay <br/>Booking App"
             technologies={["Next.js", "Tailwind CSS", "Node.js", "MongoDB"]}
-            className="bg-[#FF6934]"
+            className="bg-[#FF6934]/70"
           />
           <Button className="mx-auto h-auto w-full max-w-[323px] rounded-full bg-primary-light px-3 py-5 hover:bg-primary-light/90 dark:bg-primary-dark">
             <Typography className="flex items-center gap-2.5 text-center text-[18px] font-semibold leading-[29px] text-white-900">
