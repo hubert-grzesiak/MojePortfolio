@@ -16,6 +16,27 @@ export const metadata: Metadata = {
   title: "Hubert Grzesiak - Frontend Developer",
   description:
     "Welcome to my website! My name is Hubert Grzesiak, and I'm a passionate Frontend Developer. I specialize in technologies like React.js, Tailwind CSS, Next.js, and MongoDB. Explore my portfolio to see my projects and skills in action.",
+  keywords: [
+    "Hubert Grzesiak",
+    "Frontend Developer",
+    "Web Developer",
+    "web dev",
+    "React",
+    "Tailwind CSS",
+    "Next.js",
+    "MongoDB",
+  ],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   twitter: {
     card: "summary_large_image",
     site: "@HubertGrzesiak",
