@@ -19,16 +19,19 @@ const FeaturedProjects = () => {
             title="Restly - A Stay <br/>Booking App"
             technologies={["Next.js", "Tailwind CSS", "Node.js", "MongoDB"]}
             className="bg-[#416CEA]/70"
+            href="restly"
           />
           <ProjectCard
             title="Restly - A Stay <br/>Booking App"
             technologies={["Next.js", "Tailwind CSS", "Node.js", "MongoDB"]}
             className="bg-[#0BAB7C]/70"
+            href="restly"
           />
           <ProjectCard
             title="Restly - A Stay <br/>Booking App"
             technologies={["Next.js", "Tailwind CSS", "Node.js", "MongoDB"]}
             className="bg-[#FF6934]/70"
+            href="restly"
           />
           <Link
             href="/case-studies"

@@ -10,8 +10,8 @@ const ProjectsGrid = ({ className }: { className?: string }) => {
       )}
     >
       <div className="mx-auto flex w-full max-w-[1270px] flex-col flex-wrap items-center justify-center gap-5 md:flex-row md:gap-9">
-        <ProjectCard />
-        <ProjectCard />
+        <ProjectCard href="restly" />
+        <ProjectCard href="restly" />
       </div>
     </section>
   );

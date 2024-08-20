@@ -3,12 +3,14 @@ import { cn } from "@lib/utils";
 import Image, { StaticImageData } from "next/image";
 import React, { ComponentPropsWithoutRef } from "react";
 import restlyImageDesktop from "../../public/images/projects/restly.svg";
+import Link from "next/link";
 
 interface ProjectCardProps extends ComponentPropsWithoutRef<"div"> {
   title?: string;
   description?: string;
   projectBg?: string;
   image?: StaticImageData;
+  href?: string;
 }
 
 const ProjectCard = ({
@@ -16,10 +18,12 @@ const ProjectCard = ({
   description = "Restly - A Stay Booking App",
   projectBg = "#5CAFFC",
   image = restlyImageDesktop,
+  href = "/",
   className,
 }: ProjectCardProps) => {
   return (
-    <div
+    <Link
+      href={`/case-studies/${href}`}
       className={cn(
         "h-[284px] w-[345px] md:h-[431px] md:w-[465px] xl:w-[550px]",
         className,
@@ -48,7 +52,7 @@ const ProjectCard = ({
           {description}
         </Typography>
       </div>
-    </div>
+    </Link>
   );
 };
 

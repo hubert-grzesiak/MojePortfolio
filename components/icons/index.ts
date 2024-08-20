@@ -22,6 +22,39 @@ import { ButtonArrow } from "./ButtonArrow";
 import { DownloadIcon } from "./DownloadIcon";
 import { HamburgerIcon } from "./HamburgerIcon";
 import { FaReact } from "react-icons/fa";
+import { ChallengeArrow } from "./ChallengeArrow";
+import { TickIcon } from "./TickIcon";
+import { CallIcon } from "./CallIcon";
+import { MessageIcon } from "./MessageIcon";
+
+import { DefinitionIcon } from "./process/DefinitionIcon";
+import { DeployIcon } from "./process/DeployIcon";
+import { DesignIcon } from "./process/DesignIcon";
+import { DevelopIcon } from "./process/DevelopIcon";
+import { PlanIcon } from "./process/PlanIcon";
+
+export const processIcons = [
+  {
+    name: "Definition",
+    icon: DefinitionIcon,
+  },
+  {
+    name: "Plan",
+    icon: PlanIcon,
+  },
+  {
+    name: "Design",
+    icon: DesignIcon,
+  },
+  {
+    name: "Develop",
+    icon: DevelopIcon,
+  },
+  {
+    name: "Deployment",
+    icon: DeployIcon,
+  },
+];
 
 export const skillsIcons = [
   {
@@ -102,4 +135,8 @@ export {
   ButtonArrow,
   DownloadIcon,
   HamburgerIcon,
+  ChallengeArrow,
+  TickIcon,
+  CallIcon,
+  MessageIcon,
 };

@@ -2,7 +2,7 @@ import Typography from "../../shared/Typography";
 import Link from "next/link";
 import CopyButton from "@components/home/CopyButton";
 import Image from "next/image";
-import heroImage from "../../../public/images/hero-image.png";
+import heroImage from "../../../public/svgs/hero-image.svg";
 import { cn } from "@lib/utils";
 
 const Hero = ({ className }: { className?: string }) => {
