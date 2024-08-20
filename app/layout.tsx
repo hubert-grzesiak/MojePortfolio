@@ -54,6 +54,10 @@ export const metadata: Metadata = {
     siteName: "Hubert Grzesiak",
     images: "https://hubertgrzesiak.com/opengraph-image.png",
   },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export const poppins = Poppins({
