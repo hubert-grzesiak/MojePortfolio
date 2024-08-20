@@ -29,7 +29,7 @@ const Contact = () => {
               </div>
             </div>
             <div>
-              <h2 className="mb-6 text-3xl font-bold">Send Us a Message</h2>
+              <h2 className="mb-6 text-3xl font-bold">Send a Message</h2>
               <ContactForm />
             </div>
           </div>
