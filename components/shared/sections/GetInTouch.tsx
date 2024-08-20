@@ -25,7 +25,10 @@ const GetInTouch = () => {
             Have a project in <br /> mind that requires <br /> technical
             expertise?
           </Typography>
-          <Link href="/contact" className="h-[47px] w-full md:h-auto">
+          <Link
+            href="/contact"
+            className="flex h-[47px] w-full justify-end md:h-auto"
+          >
             <Button className="bottom-0 h-[47px] w-full rounded-full bg-primary-light px-2 py-[14px] hover:bg-primary-light/90 md:h-[69px] md:w-[310px] md:max-w-[323px] md:px-3 md:py-5">
               <Typography className="flex items-center gap-2.5 text-center text-[14px] font-semibold leading-[22px] text-white-900 md:text-[18px] md:leading-[29px]">
                 Get in Touch with Me <ButtonArrow />
