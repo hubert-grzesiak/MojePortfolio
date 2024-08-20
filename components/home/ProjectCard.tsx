@@ -41,7 +41,7 @@ const ProjectCard: React.FC<Props> = ({
             {technologies.map((tech: string) => (
               <Typography
                 as="div"
-                className="lg:leading-[22px rounded-[6px] bg-white/20 p-2.5 text-[12px] leading-[19px] text-white-900 md:text-[14px] md:leading-[22px] lg:text-[14px]"
+                className="rounded-[6px] bg-white/20 p-2.5 text-[12px] leading-[19px] text-white-900 md:text-[14px] md:leading-[22px] lg:text-[14px] lg:leading-[22px]"
                 key={tech}
               >
                 {tech}
