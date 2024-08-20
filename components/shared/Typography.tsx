@@ -18,9 +18,6 @@ const typography = cva("font-poppins", {
       "small-bold": " font-semibold text-[14px] leading-[20.3px] text-left",
     },
   },
-  defaultVariants: {
-    variant: "body-regular",
-  },
 });
 
 interface TypographyProps extends VariantProps<typeof typography> {
