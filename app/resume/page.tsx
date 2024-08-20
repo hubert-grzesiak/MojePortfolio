@@ -6,20 +6,22 @@ import Divider from "@components/shared/Divider";
 
 const Resume = () => {
   return (
-    <div className="kontener mx-auto text-sm lg:text-base">
+    <main className="kontener mx-auto text-sm lg:text-base">
       <div className="links">
         <div className="left-links">
           <div className="relative h-[60px] w-[60px] lg:h-[72px] lg:w-[72px]">
             <Image
               src="https://res.cloudinary.com/dev6yhoh3/image/upload/v1690395297/assets/facebook-icon_h5ycdi.png"
+              width={60}
+              height={60}
               alt="facebook"
-              fill
             />
           </div>
           <div className="loupe-job">
             <div className="relative h-[24px] w-[24px] lg:h-[30px] lg:w-[30px]">
               <Image
-                fill
+                width={24}
+                height={24}
                 src="https://res.cloudinary.com/dev6yhoh3/image/upload/v1690395297/assets/loupe_jwz11k.png"
                 alt="loupe"
               />
@@ -33,7 +35,8 @@ const Resume = () => {
             <div className="relative h-[50px] w-[50px] rounded-full">
               <Image
                 src="https://res.cloudinary.com/dev6yhoh3/image/upload/v1723471058/portfolio/3D402557-DD54-4F55-87A2-4194940B68FC_1_201_a_fz9tge.jpg"
-                fill
+                width={50}
+                height={50}
                 alt="picture"
                 className="shrink-0 rounded-full object-cover"
               />
@@ -49,7 +52,8 @@ const Resume = () => {
             >
               <Image
                 src="https://res.cloudinary.com/dev6yhoh3/image/upload/v1690395297/assets/linkedin-icon_an5fd5.png"
-                fill
+                width={30}
+                height={30}
                 alt="linkedin"
               ></Image>
             </a>
@@ -61,7 +65,8 @@ const Resume = () => {
             >
               <Image
                 src="https://res.cloudinary.com/dev6yhoh3/image/upload/v1690395297/assets/github-icon_ym79e7.png"
-                fill
+                width={30}
+                height={30}
                 alt="github"
               />
             </a>
@@ -102,7 +107,8 @@ const Resume = () => {
               <div className="relative h-[70px] w-[70px] shrink-0 rounded-full">
                 <Image
                   src="https://res.cloudinary.com/dev6yhoh3/image/upload/v1723471058/portfolio/3D402557-DD54-4F55-87A2-4194940B68FC_1_201_a_fz9tge.jpg"
-                  fill
+                  width={70}
+                  height={70}
                   alt="picture"
                   className="shrink-0 rounded-full object-cover"
                 />
@@ -140,6 +146,8 @@ const Resume = () => {
                 <Image
                   src="https://res.cloudinary.com/dev6yhoh3/image/upload/v1690401584/email_1_xycgv6.png"
                   alt="email"
+                  width={30}
+                  height={30}
                   className="h-[30px] w-[30px] lg:h-[39px] lg:w-[38px]"
                 />
                 <p>hubertgrzesiak.dev@gmail.com</p>
@@ -185,7 +193,7 @@ const Resume = () => {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 export default Resume;
