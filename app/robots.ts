@@ -1,6 +1,9 @@
 import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
+  const baseUrl =
+    process.env.NEXT_PUBLIC_BASE_URL || "https://hubertgrzesiak.com";
+
   return {
     rules: [
       {
@@ -10,6 +13,6 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     host: process.env.NEXT_PUBLIC_BASE_URL,
-    sitemap: `${process.env.NEXT_PUBLIC_BASE_URL}/sitemap.xml`,
+    sitemap: `${baseUrl}/sitemap.xml`,
   };
 }
