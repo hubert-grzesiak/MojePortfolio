@@ -15,7 +15,7 @@ interface ProjectCardProps extends ComponentPropsWithoutRef<"div"> {
 
 const OtherCaseStudyCard = ({
   title = "Restly",
-  description = "Jobit, a web app made with React and JSearch API, links developers to millions of job openings. It offers easy job search by...",
+  description = "Restly, a web app made with Next.js and mapbox, links people to thousands of objects. It offers easy object search by...",
   image = restlyImageDesktop,
   href = "restly",
   className,
@@ -23,7 +23,7 @@ const OtherCaseStudyCard = ({
   return (
     <div
       className={cn(
-        "shadow-otherCaseStudyCardLight dark:shadow-otherCaseStudyCardDark h-[385px] w-[345px] rounded-[20px] bg-white-900 dark:bg-black-300 md:h-[481px] md:w-[430px]",
+        "h-[385px] w-[345px] rounded-[20px] bg-white-900 shadow-otherCaseStudyCardLight dark:bg-black-300 dark:shadow-otherCaseStudyCardDark md:h-[481px] md:w-[430px]",
         className,
       )}
     >
