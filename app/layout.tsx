@@ -11,18 +11,19 @@ import { Providers } from "./providers";
 import Navbar from "@components/shared/Navbar";
 
 export const metadata: Metadata = {
-  title: "Hubert Grzesiak - Frontend Developer",
+  title: "Hubert Grzesiak - Frontend Developer | React, Next.js, Tailwind",
   description:
-    "Welcome to my website! My name is Hubert Grzesiak, and I'm a passionate Frontend Developer. I specialize in technologies like React.js, Tailwind CSS, Next.js, and MongoDB. Explore my portfolio to see my projects and skills in action.",
+    "I'm Hubert Grzesiak, a passionate Frontend Developer specializing in React.js, Tailwind CSS, Next.js, and MongoDB. Check out my portfolio to see my projects in action.",
   keywords: [
     "Hubert Grzesiak",
-    "Frontend Developer",
+    "frontend developer",
     "Web Developer",
     "web dev",
     "React",
     "Tailwind CSS",
     "Next.js",
     "MongoDB",
+    "web development portfolio",
   ],
   robots: {
     index: true,

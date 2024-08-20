@@ -7,7 +7,6 @@ import szymonPhoto from "../../public/images/opinions/szymon.webp";
 
 interface Props extends ComponentPropsWithoutRef<"div"> {
   imageUrl?: string;
-  imageAlt?: string;
   image?: string | StaticImageData;
   description?: string;
   name?: string;
@@ -15,10 +14,9 @@ interface Props extends ComponentPropsWithoutRef<"div"> {
 }
 
 const CarouselCard: FC<Props> = ({
-  imageAlt = "",
   image = szymonPhoto,
   description,
-  name,
+  name = "Szymon",
   jobTitle,
   className,
 }) => {
@@ -34,7 +32,7 @@ const CarouselCard: FC<Props> = ({
         width={328}
         height={328}
         className="h-[200px] w-[200px] self-start rounded-[16px] object-cover md:h-[328px] md:w-[328px]"
-        alt={imageAlt}
+        alt={name}
       />
       <div className="w-full max-w-[748px]">
         <div className="mb-4 mt-10 flex gap-[4px] md:mb-6 md:mt-[17px]">
