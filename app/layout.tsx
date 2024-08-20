@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Hubert Grzesiak - Frontend Developer",
     description:
-      "Welcome to my website! My name is Hubert Grzesiak, and I'm a passionate Frontend Developer. I specialize in technologies like React.js, Tailwind CSS, Next.js, and MongoDB. Explore my portfolio to see my projects and skills in action.",
+      "I'm Hubert Grzesiak, a passionate Frontend Developer specializing in React.js, Tailwind CSS, Next.js, and MongoDB. Check out my portfolio to see my projects.",
     type: "website",
     locale: "en_US",
     url: "https://hubertgrzesiak.com",
