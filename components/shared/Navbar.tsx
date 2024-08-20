@@ -7,6 +7,7 @@ import { usePathname, useRouter } from "next/navigation";
 import ResumeButton from "../home/ResumeButton";
 import ThemeSwitcher from "./ThemeSwitcher";
 import MobileMenu from "./MobileMenu";
+import Link from "next/link";
 
 const Navbar = ({ className }: { className?: string }) => {
   const pathname = usePathname();
@@ -28,15 +29,15 @@ const Navbar = ({ className }: { className?: string }) => {
 
         <div className="max-h-[24px] gap-9 text-white-500 dark:text-white-800 md:flex">
           <div className="hidden gap-9 md:flex">
-            <a href="/">
+            <Link href="/">
               <Typography
                 variant={pathname === "/" ? "small-bold" : "small-regular"}
                 className={cn(pathname === "/" && "text-gradient")}
               >
                 Home
               </Typography>
-            </a>
-            <a href="/case-studies">
+            </Link>
+            <Link href="/case-studies">
               <Typography
                 variant={
                   pathname === "/case-studies" ? "small-bold" : "small-regular"
@@ -45,8 +46,8 @@ const Navbar = ({ className }: { className?: string }) => {
               >
                 Case Studies
               </Typography>
-            </a>
-            <a href="/contact">
+            </Link>
+            <Link href="/contact">
               <Typography
                 variant={
                   pathname === "/contact" ? "small-bold" : "small-regular"
@@ -55,7 +56,7 @@ const Navbar = ({ className }: { className?: string }) => {
               >
                 Contact
               </Typography>
-            </a>
+            </Link>
             <ResumeButton />
             <div className="h-[24px] w-[1px] bg-white-500" />
           </div>

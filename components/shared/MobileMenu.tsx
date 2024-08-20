@@ -7,6 +7,7 @@ import Typography from "./Typography";
 import { cn } from "@lib/utils";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const MobileMenu = ({
   pathname,
@@ -33,7 +34,7 @@ const MobileMenu = ({
                 onClick={() => router.push("/")}
               />{" "}
             </div>
-            <a href="/">
+            <Link href="/">
               <Typography
                 variant={pathname === "/" ? "small-bold" : "small-regular"}
                 className={cn(
@@ -43,8 +44,8 @@ const MobileMenu = ({
               >
                 Home
               </Typography>
-            </a>
-            <a href="/case-studies">
+            </Link>
+            <Link href="/case-studies">
               <Typography
                 variant={
                   pathname === "/case-studies" ? "small-bold" : "small-regular"
@@ -56,8 +57,8 @@ const MobileMenu = ({
               >
                 Case Studies
               </Typography>
-            </a>
-            <a href="/contact">
+            </Link>
+            <Link href="/contact">
               <Typography
                 variant={
                   pathname === "/contact" ? "small-bold" : "small-regular"
@@ -69,7 +70,7 @@ const MobileMenu = ({
               >
                 Contact
               </Typography>
-            </a>
+            </Link>
             <a
               className="mt-[12px] block w-full"
               href="/CV_EN_Hubert_Grzesiak.pdf"
