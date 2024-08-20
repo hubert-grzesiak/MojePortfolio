@@ -50,7 +50,7 @@ const Contact = () => {
         <div className="mx-auto w-full max-w-5xl py-12 md:py-20">
           <div className="grid gap-12 md:grid-cols-2">
             <div>
-              <h2 className="mb-6 text-3xl font-bold">Get in Touch</h2>
+              <h1 className="mb-6 text-3xl font-bold">Get in Touch</h1>
               <div className="space-y-4">
                 <div>
                   <h3 className="mb-1 text-lg font-medium">Address</h3>
