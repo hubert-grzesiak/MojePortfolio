@@ -50,7 +50,7 @@ const WorkExperience = () => {
               value={"2"}
               title="University of Kalisz"
               description="IT Student— September 2021 - Present"
-              iconUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7b8LWsTGXsDD2DlHhKNbT1B4Jzx_CO9NAyg&s"
+              iconUrl="https://res.cloudinary.com/dev6yhoh3/image/upload/v1724132734/portfolio/uniwersytet-kaliski-logo_fuzldo.png"
             />
           </TabsList>
         </Tabs>

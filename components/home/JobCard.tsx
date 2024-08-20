@@ -34,7 +34,9 @@ const JobCard: FC<JobCardProps> = ({
       ) : (
         <Image
           src={iconUrl}
-          className="h-[58px] w-[58px] rounded-[10px]"
+          width={58}
+          height={58}
+          className="h-[58px] w-[58px] shrink-0 rounded-[10px] bg-white-800"
           alt={title}
         />
       )}
