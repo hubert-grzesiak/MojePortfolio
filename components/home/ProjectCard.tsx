@@ -49,7 +49,7 @@ const ProjectCard: React.FC<Props> = ({
             ))}
           </div>
         </div>
-        <Link href={href}>
+        <Link href={`/case-studies/${href}`}>
           <Typography
             as="span"
             className="flex items-center gap-[5px] text-[18px] font-semibold leading-[29px] text-white-900"

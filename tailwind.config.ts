@@ -69,6 +69,8 @@ const config = {
         serviceDarkShadow: "0px 1px 20px 0px #1F2E48",
         workShadow: "0px 10px 66px 0px #00000012",
         jobShadow: "-25px 47px 66px 0px #00000014",
+        otherCaseStudyCardLight: "0px 1px 20px 0px #E0ECFF",
+        otherCaseStudyCardDark: "0px 3px 30px 0px #1F2C41",
       },
       borderRadius: {
         lg: "var(--radius)",

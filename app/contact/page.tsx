@@ -1,6 +1,9 @@
 import React from "react";
 import ContactForm from "./ContactForm";
 import { Metadata } from "next/types";
+import Hero from "@components/contact/sections/Hero";
+import Typography from "@components/shared/Typography";
+import { CallIcon, MessageIcon } from "@components/icons";
 
 export const metadata: Metadata = {
   title: "Hubert Grzesiak - Contact",
@@ -45,38 +48,45 @@ export const metadata: Metadata = {
 };
 const Contact = () => {
   return (
-    <main className="mt-[80px]">
-      <div className="mx-auto max-w-3xl">
-        <div className="mx-auto w-full max-w-5xl py-12 md:py-20">
-          <div className="grid gap-12 md:grid-cols-2">
-            <div>
-              <h1 className="mb-6 text-3xl font-bold">Get in Touch</h1>
-              <div className="space-y-4">
-                <div>
-                  <h3 className="mb-1 text-lg font-medium">Address</h3>
-                  <p className="text-muted-foreground">
-                    Poznańska 201, 62-800 Kalisz
-                  </p>
-                </div>
-                <div>
-                  <h3 className="mb-1 text-lg font-medium">Phone</h3>
-                  <p className="text-muted-foreground">(+48) 700 600 500</p>
-                </div>
-                <div>
-                  <h3 className="mb-1 text-lg font-medium">Email</h3>
-                  <p className="text-muted-foreground">
-                    32422@uniwersytetkaliski.edu.pl
-                  </p>
-                </div>
+    <main>
+      <Hero />
+      <section className="w-full bg-white-900 px-6 py-9 dark:bg-black-200 md:p-[72px]">
+        <div className="mx-auto flex max-w-[1240px] flex-col-reverse lg:flex-row lg:justify-between lg:gap-4">
+          <div className="flex max-w-full flex-col gap-[40px] lg:w-[434px]">
+            <div className="flex flex-col gap-[30px]">
+              <Typography className="text-[20px] leading-[30px] text-black-300 dark:text-white-900 md:text-[24px] md:leading-[31px]">
+                Phone Number
+              </Typography>
+              <div className="flex items-center gap-[13px]">
+                <CallIcon className="[&>path]:fill-black-400 dark:[&>path]:fill-white-800" />
+                <a
+                  href="tel:+48 734 667 582"
+                  className="font-poppins text-[18px] !font-semibold leading-[26px] text-black-400 dark:text-white-800 md:text-[24px] md:leading-[31px]"
+                >
+                  +48 734 667 582
+                </a>
               </div>
             </div>
-            <div>
-              <h2 className="mb-6 text-3xl font-bold">Send a Message</h2>
-              <ContactForm />
+            <div className="flex flex-col gap-[30px]">
+              <Typography className="text-[20px] leading-[30px] text-black-300 dark:text-white-900 md:text-[24px] md:leading-[31px]">
+                Email Address
+              </Typography>
+              <div className="flex items-center gap-[13px]">
+                <MessageIcon className="shrink-0 [&>path]:fill-black-400 dark:[&>path]:fill-white-800" />
+                <a
+                  href="mailto:hubertgrzesiak.dev@gmail.com"
+                  className="font-poppins text-[18px] !font-semibold leading-[26px] text-black-400 dark:text-white-800 md:text-[24px] md:leading-[31px]"
+                >
+                  hubertgrzesiak.dev@gmail.com
+                </a>
+              </div>
             </div>
           </div>
+          <div className="w-full pb-[48px] md:pb-[70px] lg:max-w-[700px] lg:pb-0">
+            <ContactForm />
+          </div>
         </div>
-      </div>
+      </section>
     </main>
   );
 };

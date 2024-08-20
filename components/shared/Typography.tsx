@@ -10,7 +10,8 @@ const typography = cva("font-poppins", {
       h3: "font-semibold text-[32px] leading-[33.6px] tracking-[-0.005em] text-center",
       "base-regular": "font-normal text-[24px] leading-[31.2px] text-left",
       "base-bold": " font-semibold text-[24px] leading-[31.2px] text-left",
-      "p-regular": " font-normal text-[20px] leading-[30px] text-left",
+      "p-regular":
+        "font-normal text-[14px] leading-[22px] md:text-[20px] md:leading-[30px] text-left",
       "p-bold": " font-semibold text-[20px] leading-[26px] text-left",
       "body-regular": "font-normal text-[18px] leading-[28.8px] text-left",
       "body-bold": " font-semibold text-[18px] leading-[28.8px] text-left",

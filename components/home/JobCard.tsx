@@ -44,7 +44,7 @@ const JobCard: FC<JobCardProps> = ({
         <Typography
           data-h2
           as="h2"
-          className="mb-[9px] font-semibold md:mb-[5px] lg:mb-2.5 lg:text-[24px] lg:leading-[31px]"
+          className="mb-[9px] text-left font-semibold md:mb-[5px] lg:mb-2.5 lg:text-[24px] lg:leading-[31px]"
         >
           {title}
         </Typography>
