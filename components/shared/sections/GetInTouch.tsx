@@ -3,7 +3,7 @@ import Typography from "@components/shared/Typography";
 import ctaImage from "../../../public/images/CTA.png";
 import Image from "next/image";
 import { ButtonArrow } from "@components/icons";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 
 const GetInTouch = () => {
   return (

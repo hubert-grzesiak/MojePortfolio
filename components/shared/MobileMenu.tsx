@@ -7,7 +7,7 @@ import Typography from "./Typography";
 import { cn } from "@lib/utils";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 
 const MobileMenu = ({
   pathname,
