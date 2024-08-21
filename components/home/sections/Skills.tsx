@@ -30,7 +30,7 @@ const Skills = () => {
               >
                 <Icon
                   className={cn(
-                    "h-[27px] w-[27px] md:h-[50px] md:w-[50px]",
+                    "h-[27px] w-[27px] fill-[#778295] md:h-[50px] md:w-[50px]",
                     icon.name === "React" &&
                       "h-[62px] fill-[#53C1DE] md:w-[62px]",
                   )}

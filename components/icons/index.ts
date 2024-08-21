@@ -21,7 +21,7 @@ import { StarIcon } from "./StarIcon";
 import { ButtonArrow } from "./ButtonArrow";
 import { DownloadIcon } from "./DownloadIcon";
 import { HamburgerIcon } from "./HamburgerIcon";
-import { FaReact } from "react-icons/fa";
+import { FaFigma, FaJava, FaLaravel, FaReact } from "react-icons/fa";
 import { ChallengeArrow } from "./ChallengeArrow";
 import { TickIcon } from "./TickIcon";
 import { CallIcon } from "./CallIcon";
@@ -32,6 +32,8 @@ import { DeployIcon } from "./process/DeployIcon";
 import { DesignIcon } from "./process/DesignIcon";
 import { DevelopIcon } from "./process/DevelopIcon";
 import { PlanIcon } from "./process/PlanIcon";
+import { SiMicrosoftsqlserver } from "react-icons/si";
+import { GsapIcon } from "./GsapIcon";
 
 export const processIcons = [
   {
@@ -82,12 +84,12 @@ export const skillsIcons = [
     icon: CSSIcon,
   },
   {
-    name: "Node.js",
-    icon: NodeIcon,
+    name: "Java",
+    icon: FaJava,
   },
   {
-    name: "Express.js",
-    icon: ExpressIcon,
+    name: "Laravel",
+    icon: FaLaravel,
   },
   {
     name: "MongoDB",
@@ -108,6 +110,14 @@ export const skillsIcons = [
   {
     name: "Framer Motion",
     icon: MotionIcon,
+  },
+  {
+    name: "SQL Server",
+    icon: SiMicrosoftsqlserver,
+  },
+  {
+    name: "Figma",
+    icon: FaFigma,
   },
 ];
 
@@ -139,4 +149,5 @@ export {
   TickIcon,
   CallIcon,
   MessageIcon,
+  GsapIcon,
 };
