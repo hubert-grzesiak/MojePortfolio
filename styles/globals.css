@@ -160,3 +160,7 @@
     @apply bg-[#428DFF]/10 backdrop-blur-[5px];
   }
 }
+
+.theme-toggle > svg {
+  @apply h-6 w-6;
+}

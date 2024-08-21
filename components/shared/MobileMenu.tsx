@@ -25,7 +25,7 @@ const MobileMenu = ({
           <HamburgerIcon className="hover:cursor-pointer dark:[&>path]:fill-white" />
         </DialogTrigger>
         <DialogContent className="h-[362px] w-full max-w-[345px] rounded-[10px]">
-          <div className="flex max-h-[24px] flex-col gap-2 text-white-500 dark:text-white-800">
+          <div className="flex max-h-[32px] flex-col gap-2 text-white-500 dark:text-white-800">
             <div className="mb-[30px]">
               <Image
                 src={LogoBlack}
