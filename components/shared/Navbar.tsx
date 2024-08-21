@@ -7,7 +7,7 @@ import { usePathname, useRouter } from "next/navigation";
 import ResumeButton from "../home/ResumeButton";
 import ThemeSwitcher from "./ThemeSwitcher";
 import MobileMenu from "./MobileMenu";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 
 const Navbar = ({ className }: { className?: string }) => {
   const pathname = usePathname();
