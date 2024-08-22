@@ -16,7 +16,7 @@ interface ProjectCardProps extends ComponentPropsWithoutRef<"div"> {
 const ProjectCard = ({
   title = "Restly",
   description = "Restly - A Stay Booking App",
-  projectBg = "#5CAFFC",
+  projectBg = "rgb(92, 175, 252)",
   image = restlyImageDesktop,
   href = "/",
   className,

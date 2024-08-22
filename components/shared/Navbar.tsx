@@ -57,6 +57,14 @@ const Navbar = ({ className }: { className?: string }) => {
                 Contact
               </Typography>
             </Link>
+            <Link href="/blog">
+              <Typography
+                variant={pathname === "/blog" ? "small-bold" : "small-regular"}
+                className={cn(pathname === "/blog" && "text-gradient")}
+              >
+                Blog
+              </Typography>
+            </Link>
             <ResumeButton />
             <div className="h-[24px] w-[1px] bg-white-500" />
           </div>

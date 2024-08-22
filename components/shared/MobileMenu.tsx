@@ -71,6 +71,17 @@ const MobileMenu = ({
                 Contact
               </Typography>
             </Link>
+            <Link href="/blog">
+              <Typography
+                variant={pathname === "/blog" ? "small-bold" : "small-regular"}
+                className={cn(
+                  "transition-color rounded-[100px] px-6 py-3 hover:bg-[#fea92e]/50 hover:text-black-200 hover:dark:text-black",
+                  pathname === "/blog" && "bg-[#fea92e] text-white-900",
+                )}
+              >
+                Blog
+              </Typography>
+            </Link>
             <a
               className="mt-[12px] block w-full"
               href="/CV_EN_Hubert_Grzesiak.pdf"
