@@ -5,7 +5,7 @@ const ProjectsGrid = ({ className }: { className?: string }) => {
   return (
     <section
       className={cn(
-        "w-full overflow-hidden bg-white-900 px-6 py-[48px] dark:bg-black-300 md:py-[72px]",
+        "w-full overflow-hidden bg-white-900 px-6 py-[48px] dark:bg-black-200 md:py-[72px]",
         className,
       )}
     >
