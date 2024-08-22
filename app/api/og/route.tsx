@@ -42,7 +42,7 @@ export async function GET(req: NextRequest) {
               fontFamily: "Kaisei Tokumin",
               letterSpacing: "-0.05em",
               fontStyle: "normal",
-              color: "white",
+              color: "black",
               lineHeight: "120px",
               whiteSpace: "pre-wrap",
             }}
