@@ -153,7 +153,7 @@ export const Compare = ({
     <div
       ref={sliderRef}
       className={cn(
-        "w-fulll h-[400px] max-w-[672px] overflow-hidden",
+        "w-fulll h-[400px] max-w-[736px] overflow-hidden",
         className,
       )}
       style={{

@@ -7,6 +7,9 @@ import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { Tag } from "@components/blog/Tag";
 import { calculateReadingTime } from "@/lib/utils";
+import { DashboardTableOfContents } from "@components/blog/toc";
+import { getTableOfContents } from "@/lib/toc";
+import { toc } from "mdast-util-toc";
 
 interface PostPageProps {
   params: {
@@ -69,27 +72,39 @@ export async function generateStaticParams(): Promise<
 
 export default async function PostPage({ params }: PostPageProps) {
   const post = await getPostFromParams(params);
-
+  console.log("post", post);
   if (!post || !post.published) {
     notFound();
   }
   const readingTime = calculateReadingTime(post.body);
-
+  const toc = post?.toc;
+  console.log("toc", toc);
   return (
-    <article className="container prose mx-auto max-w-3xl py-6 dark:prose-invert lg:pt-[150px]">
-      <h1 className="mb-2">{post.title}</h1>
-      <div className="mb-2 flex gap-2">
-        {post.tags?.map((tag) => <Tag tag={tag} key={tag} />)}
-      </div>
-      {post.description ? (
-        <p className="mt-0 text-xl text-muted-foreground">{post.description}</p>
-      ) : null}
-      <p className="text-sm text-muted-foreground">
-        Estimated reading time: {readingTime} minute(s)
-      </p>
+    <main className="container relative mx-auto mt-[100px] w-full flex-1 justify-center gap-[50px] py-6 md:mt-[150px] md:flex lg:gap-10 lg:pb-10">
+      <article className="prose max-w-3xl pb-6 dark:prose-invert">
+        <h1 className="mb-2">{post.title}</h1>
+        <div className="mb-2 flex gap-2">
+          {post.tags?.map((tag) => <Tag tag={tag} key={tag} />)}
+        </div>
+        {post.description ? (
+          <p className="mt-0 text-xl text-muted-foreground">
+            {post.description}
+          </p>
+        ) : null}
+        <p className="text-sm text-muted-foreground">
+          Estimated reading time: {readingTime} minute(s)
+        </p>
 
-      <hr className="my-4" />
-      <MDXContent code={post.body} />
-    </article>
+        <hr className="my-4" />
+        <MDXContent code={post.body} />
+      </article>
+      <aside className="sticky">
+        <div className="sticky top-16 hidden pb-6 text-sm xl:block">
+          <div className="sticky top-16 -mt-10 max-h-[calc(var(--vh)-4rem)] overflow-y-auto pt-10">
+            <DashboardTableOfContents toc={toc} />
+          </div>
+        </div>
+      </aside>
+    </main>
   );
 }
