@@ -4,9 +4,7 @@ import { DashboardTableOfContents } from "@components/blog/toc";
 import { useEffect, useState } from "react";
 
 export function ClientSideTableOfContents() {
-  const [toc, setToc] = useState<
-    { title: string | null; url: string | null }[]
-  >([]);
+  const [toc, setToc] = useState<{ title: string; url: string }[]>([]);
 
   useEffect(() => {
     const tocElements = Array.from(
@@ -18,7 +16,7 @@ export function ClientSideTableOfContents() {
       url: item.getAttribute("href"),
     }));
 
-    setToc(items);
+    setToc(items as { title: string; url: string }[]);
   }, []);
 
   const tableOfItems = toc.map((item) => ({
@@ -27,6 +25,7 @@ export function ClientSideTableOfContents() {
   }));
 
   console.log("tableOfItems", tableOfItems);
+  const items = { items: tableOfItems };
 
-  return <DashboardTableOfContents toc={{ items: tableOfItems }} />;
+  return <DashboardTableOfContents toc={items} />;
 }
