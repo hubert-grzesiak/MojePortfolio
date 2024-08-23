@@ -5,7 +5,7 @@ import Typography from "./Typography";
 import { cn } from "@lib/utils";
 import { usePathname, useRouter } from "next/navigation";
 import ResumeButton from "../home/ResumeButton";
-import ThemeSwitcher from "./ThemeSwitcher";
+import ThemeSwitcher from "./ThemeSwitcher.jsx";
 import MobileMenu from "./MobileMenu";
 import { Link } from "next-view-transitions";
 
@@ -27,8 +27,8 @@ const Navbar = ({ className }: { className?: string }) => {
           onClick={() => router.push("/")}
         />
 
-        <div className="max-h-[24px] gap-9 text-white-500 dark:text-white-800 md:flex">
-          <div className="hidden gap-9 md:flex">
+        <div className="max-h-[32px] gap-9 text-white-500 dark:text-white-800 md:flex">
+          <div className="hidden gap-9 md:flex md:items-center">
             <Link href="/">
               <Typography
                 variant={pathname === "/" ? "small-bold" : "small-regular"}
@@ -57,10 +57,18 @@ const Navbar = ({ className }: { className?: string }) => {
                 Contact
               </Typography>
             </Link>
+            <Link href="/blog">
+              <Typography
+                variant={pathname === "/blog" ? "small-bold" : "small-regular"}
+                className={cn(pathname === "/blog" && "text-gradient")}
+              >
+                Blog
+              </Typography>
+            </Link>
             <ResumeButton />
             <div className="h-[24px] w-[1px] bg-white-500" />
           </div>
-          <div className="flex gap-[14px]">
+          <div className="flex items-center gap-[14px]">
             <ThemeSwitcher />
             <MobileMenu pathname={pathname} className="md:hidden" />
           </div>
