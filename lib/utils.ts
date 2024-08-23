@@ -48,3 +48,11 @@ export function getPostsByTagSlug(posts: Array<Post>, tag: string) {
     return slugifiedTags.includes(tag);
   });
 }
+
+export function calculateReadingTime(text: string) {
+  const wordsPerMinute = 200; // Średnia prędkość czytania
+  const words = text.split(/\s+/).length; // Liczba słów w tekście
+  const readingTimeMinutes = Math.ceil(words / wordsPerMinute); // Czas w minutach zaokrąglony w górę
+
+  return readingTimeMinutes;
+}

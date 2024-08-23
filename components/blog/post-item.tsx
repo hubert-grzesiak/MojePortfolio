@@ -1,4 +1,4 @@
-import { Calendar } from "lucide-react";
+import { Calendar, TimerIcon } from "lucide-react";
 import { Link } from "next-view-transitions";
 import { cn, formatDate } from "@/lib/utils";
 import { Tag } from "./Tag";
@@ -13,6 +13,7 @@ interface PostItemProps {
   description?: string;
   date: string;
   tags?: Array<string>;
+  readingTime?: number;
 }
 
 export function PostItem({
@@ -21,17 +22,25 @@ export function PostItem({
   description,
   date,
   tags,
+  readingTime,
 }: PostItemProps) {
   return (
     <article className="flex flex-col gap-2 border-b border-border py-3">
-      <div>
+      <div className="flex justify-between">
         <h2 className="text-2xl font-bold">
           <Link href={"/" + slug}>{title}</Link>
         </h2>
       </div>
-      <div className="flex gap-2">
-        {tags?.map((tag) => <Tag tag={tag} key={tag} />)}
+      <div className="flex justify-between">
+        <div className="flex gap-2">
+          {tags?.map((tag) => <Tag tag={tag} key={tag} />)}
+        </div>
+        <div className="flex items-center gap-1 text-sm text-muted-foreground">
+          <TimerIcon className="h-[16px] w-[16px] shrink-0" />
+          <p>{readingTime} min read</p>
+        </div>
       </div>
+
       <Views slug={slug} />
       <div className="max-w-none text-muted-foreground">{description}</div>
       <div className="flex items-center justify-between">

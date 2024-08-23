@@ -15,7 +15,7 @@ const Navbar = ({ className }: { className?: string }) => {
   return (
     <nav
       className={cn(
-        "fixed top-0 z-[20] w-full bg-white-800 pt-6 dark:bg-black-300 md:pt-9",
+        "fixed top-0 z-[999] w-full bg-white-800/60 pt-6 backdrop-blur-[32px] dark:bg-black-300/60 md:pt-9",
         className,
       )}
     >

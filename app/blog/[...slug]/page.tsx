@@ -6,6 +6,8 @@ import "@/styles/mdx.css";
 import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { Tag } from "@components/blog/Tag";
+import { calculateReadingTime } from "@/lib/utils";
+
 interface PostPageProps {
   params: {
     slug: string[];
@@ -71,6 +73,7 @@ export default async function PostPage({ params }: PostPageProps) {
   if (!post || !post.published) {
     notFound();
   }
+  const readingTime = calculateReadingTime(post.body);
 
   return (
     <article className="container prose mx-auto max-w-3xl py-6 dark:prose-invert lg:pt-[150px]">
@@ -81,6 +84,10 @@ export default async function PostPage({ params }: PostPageProps) {
       {post.description ? (
         <p className="mt-0 text-xl text-muted-foreground">{post.description}</p>
       ) : null}
+      <p className="text-sm text-muted-foreground">
+        Estimated reading time: {readingTime} minute(s)
+      </p>
+
       <hr className="my-4" />
       <MDXContent code={post.body} />
     </article>
