@@ -85,7 +85,7 @@ const MobileMenu = ({
             <a
               className="mt-[12px] block w-full"
               href="/CV_EN_Hubert_Grzesiak.pdf"
-              download="CV_EN_Hubert_Grzesiak.pdf"
+              target="_blank"
             >
               <Button
                 type="submit"

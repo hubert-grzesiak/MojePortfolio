@@ -13,7 +13,7 @@ const ResumeButton = () => {
       <a
         className="flex w-full items-center gap-[3px]"
         href="/CV_EN_Hubert_Grzesiak.pdf"
-        download="CV_EN_Hubert_Grzesiak.pdf"
+        target="_blank"
       >
         <DownloadIcon
           onClick={() => {}}
