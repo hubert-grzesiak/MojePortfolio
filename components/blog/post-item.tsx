@@ -1,10 +1,8 @@
 import { Calendar, TimerIcon } from "lucide-react";
-import { Link } from "next-view-transitions";
+import Link from "next/link";
 import { cn, formatDate } from "@/lib/utils";
 import { Tag } from "./Tag";
 import ViewCounter from "@app/blog/view-counter";
-import { cache } from "react";
-import { increment } from "@db/actions";
 import { getViewsCount } from "@db/queries";
 
 interface PostItemProps {
@@ -59,10 +57,7 @@ export function PostItem({
   );
 }
 
-const incrementViews = cache(increment);
-
 async function Views({ slug }: { slug: string }) {
   const views = await getViewsCount();
-  incrementViews(slug);
   return <ViewCounter allViews={views} slug={slug} />;
 }

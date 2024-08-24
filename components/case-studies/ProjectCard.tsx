@@ -3,7 +3,7 @@ import { cn } from "@lib/utils";
 import Image, { StaticImageData } from "next/image";
 import React, { ComponentPropsWithoutRef } from "react";
 import restlyImageDesktop from "../../public/images/projects/restly.svg";
-import { Link } from "next-view-transitions";
+import Link from "next/link";
 
 interface ProjectCardProps extends ComponentPropsWithoutRef<"div"> {
   title?: string;

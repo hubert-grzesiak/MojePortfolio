@@ -67,10 +67,13 @@
     @apply bg-background text-foreground;
   }
 }
+
 .text-gradient {
   @apply text-[#fea92e];
 }
-
+html {
+  scroll-behavior: smooth;
+}
 .highlighted-text {
   background: linear-gradient(to right, #fea92e, #fea92e);
   background-size: 100% 28px;

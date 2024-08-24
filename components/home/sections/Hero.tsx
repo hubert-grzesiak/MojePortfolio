@@ -1,5 +1,5 @@
 import Typography from "../../shared/Typography";
-import { Link } from "next-view-transitions";
+import Link from "next/link";
 import CopyButton from "@components/home/CopyButton";
 import Image from "next/image";
 import heroImage from "../../../public/svgs/hero-image.svg";

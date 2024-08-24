@@ -7,19 +7,19 @@ const computedFields = <T extends { slug: string }>(data: T) => ({
   ...data,
   slugAsParams: data.slug.split("/").slice(1).join("/"),
 });
-const tocSchema = s.object({
-  items: s.array(
-    s.object({
-      title: s.string(),
-      url: s.string(),
-      items: s.array(s.object({
-        title: s.string().optional(),
-        url: s.string().optional(),
-        items: s.array(s.any()).optional(), // Nested items, defaulting to empty array
-      })).optional().default([]) // Defaulting nested `items` array to empty
-    })
-  )
-});
+// const tocSchema = s.object({
+//   items: s.array(
+//     s.object({
+//       title: s.string(),
+//       url: s.string(),
+//       items: s.array(s.object({
+//         title: s.string().optional(),
+//         url: s.string().optional(),
+//         items: s.array(s.any()).optional(), // Nested items, defaulting to empty array
+//       })).optional().default([]) // Defaulting nested `items` array to empty
+//     })
+//   )
+// });
 const posts = defineCollection({
   name: "Post",
   pattern: "blog/**/*.mdx",
@@ -32,7 +32,7 @@ const posts = defineCollection({
       published: s.boolean().default(true),
       tags: s.array(s.string()).optional(),
       body: s.mdx(),
-      toc: tocSchema.optional(),
+      // toc: tocSchema.optional(),
     })
     .transform(computedFields),
 });

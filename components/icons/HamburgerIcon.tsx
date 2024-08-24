@@ -1,6 +1,10 @@
 import React from "react";
 
-export function HamburgerIcon(props: React.ComponentProps<"svg">) {
+// Zastosowanie forwardRef do obsługi refs
+export const HamburgerIcon = React.forwardRef<
+  SVGSVGElement,
+  React.ComponentProps<"svg">
+>((props, ref) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -8,6 +12,7 @@ export function HamburgerIcon(props: React.ComponentProps<"svg">) {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
+      ref={ref} // Dodanie ref do SVG
       {...props}
     >
       <path
@@ -16,4 +21,6 @@ export function HamburgerIcon(props: React.ComponentProps<"svg">) {
       />
     </svg>
   );
-}
+});
+
+HamburgerIcon.displayName = "HamburgerIcon";

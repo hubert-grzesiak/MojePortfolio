@@ -10,7 +10,7 @@ export function PlanIcon(props: React.ComponentProps<"svg">) {
       fill="none"
       {...props}
     >
-      <g clip-path="url(#clip0_3316_23192)">
+      <g clipPath="url(#clip0_3316_23192)">
         <path
           d="M30.9445 36.7768L45.5685 23.9636L43.5642 21.6746L28.6666 34.7267L27.4707 40.3761L30.2153 40.2168L30.9445 36.7768Z"
           fill="#D4E1F4"

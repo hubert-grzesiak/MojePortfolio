@@ -2,7 +2,7 @@ import { Button } from "@components/ui/button";
 import ProjectCard from "@components/home/ProjectCard";
 import Typography from "@components/shared/Typography";
 import { ButtonArrow } from "@components/icons";
-import { Link } from "next-view-transitions";
+import Link from "next/link";
 
 const FeaturedProjects = () => {
   return (

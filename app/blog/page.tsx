@@ -11,6 +11,7 @@ import { getAllTags, sortPosts, sortTagsByCount } from "@/lib/utils";
 import { Metadata } from "next";
 import { calculateReadingTime } from "@/lib/utils";
 import { AuroraBackgroundDemo } from "@components/blog/sections/AuroraHero";
+
 export const metadata: Metadata = {
   title: "Blog",
   description: "Read my thoughts on software development, design, and more.",

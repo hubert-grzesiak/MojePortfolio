@@ -7,7 +7,9 @@ import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { Tag } from "@components/blog/Tag";
 import { calculateReadingTime } from "@/lib/utils";
-// import { ClientSideTableOfContents } from "./ClientSideTableOfContents";
+import { ClientSideTableOfContents } from "./ClientSideTableOfContents";
+import { cache } from "react";
+import { increment } from "@db/actions";
 
 interface PostPageProps {
   params: {
@@ -18,7 +20,8 @@ interface PostPageProps {
 async function getPostFromParams(params: PostPageProps["params"]) {
   const slug = params?.slug?.join("/");
   const post = posts.find((post) => post.slugAsParams === slug);
-
+  const incrementViews = cache(increment);
+  incrementViews(slug);
   return post;
 }
 
@@ -95,13 +98,13 @@ export default async function PostPage({ params }: PostPageProps) {
         <hr className="my-4" />
         <MDXContent code={post.body} />
       </article>
-      {/* <aside className="sticky">
+      <aside className="sticky">
         <div className="sticky top-16 hidden pb-6 text-sm xl:block">
           <div className="sticky top-16 -mt-10 max-h-[calc(var(--vh)-4rem)] overflow-y-auto pt-10">
             <ClientSideTableOfContents />
           </div>
         </div>
-      </aside> */}
+      </aside>
     </main>
   );
 }

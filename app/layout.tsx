@@ -9,7 +9,6 @@ import Footer from "@components/shared/sections/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Providers } from "./providers";
 import Navbar from "@components/shared/Navbar";
-import { ViewTransitions } from "next-view-transitions";
 
 export const metadata: Metadata = {
   title: "Hubert Grzesiak - Frontend Developer | React, Next.js",
@@ -68,20 +67,18 @@ export const poppins = Poppins({
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <ViewTransitions>
-      <html lang="pl" suppressHydrationWarning>
-        <body className={cn(poppins.className, "antialiased")}>
-          <Providers>
-            <Navbar />
-            {children}
-          </Providers>
-          <Analytics />
-          <SpeedInsights />
-          <Toaster />
-          <Footer />
-        </body>
-      </html>
-    </ViewTransitions>
+    <html lang="pl" suppressHydrationWarning>
+      <body className={cn(poppins.className, "antialiased")}>
+        <Providers>
+          <Navbar />
+          {children}
+        </Providers>
+        <Analytics />
+        <SpeedInsights />
+        <Toaster />
+        <Footer />
+      </body>
+    </html>
   );
 };
 
