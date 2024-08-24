@@ -8,8 +8,8 @@ import { siteConfig } from "@/config/site";
 import { Tag } from "@components/blog/Tag";
 import { calculateReadingTime } from "@/lib/utils";
 import { ClientSideTableOfContents } from "./ClientSideTableOfContents";
-import { cache } from "react";
-import { increment } from "@db/actions";
+// import { cache } from "react";
+// import { increment } from "@db/actions";
 
 interface PostPageProps {
   params: {
@@ -20,8 +20,8 @@ interface PostPageProps {
 async function getPostFromParams(params: PostPageProps["params"]) {
   const slug = params?.slug?.join("/");
   const post = posts.find((post) => post.slugAsParams === slug);
-  const incrementViews = cache(increment);
-  incrementViews(slug);
+  // const incrementViews = cache(increment);
+  // incrementViews(slug);
   return post;
 }
 

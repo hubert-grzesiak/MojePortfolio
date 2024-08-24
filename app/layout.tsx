@@ -9,6 +9,7 @@ import Footer from "@components/shared/sections/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Providers } from "./providers";
 import Navbar from "@components/shared/Navbar";
+import { FloatingNav } from "@components/ui/floating-navbar";
 
 export const metadata: Metadata = {
   title: "Hubert Grzesiak - Frontend Developer | React, Next.js",
@@ -70,7 +71,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <html lang="pl" suppressHydrationWarning>
       <body className={cn(poppins.className, "antialiased")}>
         <Providers>
-          <Navbar />
+          <FloatingNav />
           {children}
         </Providers>
         <Analytics />
