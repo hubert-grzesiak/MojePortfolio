@@ -8,7 +8,6 @@ import { Toaster } from "@/components/ui/sonner";
 import Footer from "@components/shared/sections/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Providers } from "./providers";
-import Navbar from "@components/shared/Navbar";
 import { FloatingNav } from "@components/ui/floating-navbar";
 
 export const metadata: Metadata = {
