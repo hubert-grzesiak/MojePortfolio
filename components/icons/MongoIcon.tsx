@@ -10,7 +10,7 @@ export function MongoIcon(props: React.ComponentProps<"svg">) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <g clipPath="url(#clip0_3309_768)">
+      <g clip-path="url(#clip0_3309_768)">
         <path
           d="M25.7717 50C39.5788 50 50.7717 38.8071 50.7717 25C50.7717 11.1929 39.5788 0 25.7717 0C11.9646 0 0.771729 11.1929 0.771729 25C0.771729 38.8071 11.9646 50 25.7717 50Z"
           fill="#778295"
@@ -21,14 +21,14 @@ export function MongoIcon(props: React.ComponentProps<"svg">) {
         />
       </g>
       <defs>
-        <clipPath id="clip0_3309_768">
+        <clip-path id="clip0_3309_768">
           <rect
             width="50"
             height="50"
             fill="white"
             transform="translate(0.771729)"
           />
-        </clipPath>
+        </clip-path>
       </defs>
     </svg>
   );

@@ -13,7 +13,7 @@ import { usePathname, useRouter } from "next/navigation";
 import LogoBlack from "../../public/images/logo-black.png";
 import Image from "next/image";
 import ResumeButton from "../home/ResumeButton";
-import ThemeSwitcher from "../shared/ThemeSwitcher";
+import ThemeSwitch from "@components/shared/ThemeSwitcher";
 import MobileMenu from "../shared/MobileMenu";
 
 export const FloatingNav = ({ className }: { className?: string }) => {
@@ -113,7 +113,7 @@ export const FloatingNav = ({ className }: { className?: string }) => {
                 <div className="h-[24px] w-[1px] bg-white-500" />
               </div>
               <div className="flex items-center gap-[14px]">
-                <ThemeSwitcher />
+                <ThemeSwitch />
                 <MobileMenu pathname={pathname} className="md:hidden" />
               </div>
             </div>

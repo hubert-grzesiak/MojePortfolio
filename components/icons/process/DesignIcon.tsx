@@ -10,7 +10,7 @@ export function DesignIcon(props: React.ComponentProps<"svg">) {
       fill="none"
       {...props}
     >
-      <g clipPath="url(#clip0_3316_23188)">
+      <g clip-path="url(#clip0_3316_23188)">
         <path
           d="M6.75 17.418C6.75 14.6567 8.98877 12.418 11.75 12.418H49.25C49.3765 12.418 49.501 12.4243 49.625 12.4336V11.9717C49.625 9.21045 47.3862 6.97168 44.625 6.97168H7.125C4.36377 6.97168 2.125 9.21045 2.125 11.9717V37.1357C2.12598 39.7515 4.14209 41.9243 6.75 42.1206V17.418Z"
           fill="#D4E1F4"
@@ -25,14 +25,14 @@ export function DesignIcon(props: React.ComponentProps<"svg">) {
         />
       </g>
       <defs>
-        <clipPath id="clip0_3316_23188">
+        <clip-path id="clip0_3316_23188">
           <rect
             width="50"
             height="50"
             fill="white"
             transform="translate(0.5)"
           />
-        </clipPath>
+        </clip-path>
       </defs>
     </svg>
   );
