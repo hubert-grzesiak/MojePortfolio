@@ -10,7 +10,7 @@ export function TickIcon(props: React.ComponentProps<"svg">) {
       fill="none"
       {...props}
     >
-      <g clip-path="url(#clip0_8375_6572)">
+      <g clipPath="url(#clip0_8375_6572)">
         <path
           d="M11 22C17.0751 22 22 17.0751 22 11C22 4.92487 17.0751 0 11 0C4.92487 0 0 4.92487 0 11C0 17.0751 4.92487 22 11 22Z"
           fill="#02BC7D"
@@ -23,9 +23,9 @@ export function TickIcon(props: React.ComponentProps<"svg">) {
         />
       </g>
       <defs>
-        <clip-path id="clip0_8375_6572">
+        <clipPath id="clip0_8375_6572">
           <rect width="22" height="22" fill="white" />
-        </clip-path>
+        </clipPath>
       </defs>
     </svg>
   );

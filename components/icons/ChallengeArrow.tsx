@@ -10,7 +10,7 @@ export function ChallengeArrow(props: React.ComponentProps<"svg">) {
       fill="none"
       {...props}
     >
-      <g clip-path="url(#clip0_8375_6508)">
+      <g clipPath="url(#clip0_8375_6508)">
         <path
           d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z"
           fill="#FF3C7D"
@@ -61,9 +61,9 @@ export function ChallengeArrow(props: React.ComponentProps<"svg">) {
         />
       </g>
       <defs>
-        <clip-path id="clip0_8375_6508">
+        <clipPath id="clip0_8375_6508">
           <rect width="20" height="20" fill="white" />
-        </clip-path>
+        </clipPath>
       </defs>
     </svg>
   );

@@ -10,7 +10,7 @@ export function JavaScriptIcon(props: React.ComponentProps<"svg">) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <g clip-path="url(#clip0_3309_686)">
+      <g clipPath="url(#clip0_3309_686)">
         <path
           d="M43 0H8C3.85786 0 0.5 3.35786 0.5 7.5V42.5C0.5 46.6421 3.85786 50 8 50H43C47.1421 50 50.5 46.6421 50.5 42.5V7.5C50.5 3.35786 47.1421 0 43 0Z"
           fill="#778295"
@@ -21,14 +21,14 @@ export function JavaScriptIcon(props: React.ComponentProps<"svg">) {
         />
       </g>
       <defs>
-        <clip-path id="clip0_3309_686">
+        <clipPath id="clip0_3309_686">
           <rect
             width="50"
             height="50"
             fill="white"
             transform="translate(0.5)"
           />
-        </clip-path>
+        </clipPath>
       </defs>
     </svg>
   );

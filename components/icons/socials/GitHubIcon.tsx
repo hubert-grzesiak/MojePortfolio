@@ -10,7 +10,7 @@ export function GitHubIcon(props: React.ComponentProps<"svg">) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <g id="Social icon" clip-path="url(#clip0_3313_8203)">
+      <g id="Social icon" clipPath="url(#clip0_3313_8203)">
         <path
           id="Icon"
           fill-rule="evenodd"
@@ -20,14 +20,14 @@ export function GitHubIcon(props: React.ComponentProps<"svg">) {
         />
       </g>
       <defs>
-        <clip-path id="clip0_3313_8203">
+        <clipPath id="clip0_3313_8203">
           <rect
             width="24"
             height="24"
             fill="white"
             transform="translate(0 0.5)"
           />
-        </clip-path>
+        </clipPath>
       </defs>
     </svg>
   );
