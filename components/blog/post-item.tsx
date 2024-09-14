@@ -2,8 +2,6 @@ import { Calendar, TimerIcon } from "lucide-react";
 import Link from "next/link";
 import { cn, formatDate } from "@/lib/utils";
 import { Tag } from "./Tag";
-import ViewCounter from "@app/blog/view-counter";
-import { getViewsCount } from "@db/queries";
 
 interface PostItemProps {
   slug: string;
@@ -39,7 +37,6 @@ export function PostItem({
         </div>
       </div>
 
-      <Views slug={slug} />
       <div className="max-w-none text-muted-foreground">{description}</div>
       <div className="flex items-center justify-between">
         <dl>
@@ -55,9 +52,4 @@ export function PostItem({
       </div>
     </article>
   );
-}
-
-async function Views({ slug }: { slug: string }) {
-  const views = await getViewsCount();
-  return <ViewCounter allViews={views} slug={slug} />;
 }
