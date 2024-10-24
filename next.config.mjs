@@ -50,8 +50,6 @@ const nextConfig = {
   },
 };
 const ContentSecurityPolicy = `
-    default-src 'self';
-    script-src 'self' https://va.vercel-scripts.com;
     style-src 'self' 'unsafe-inline';
     img-src 'self' https://lh3.googleusercontent.com https://res.cloudinary.com https://static.vecteezy.com https://thumbs.dreamstime.com blob: data:;
     media-src 'none';

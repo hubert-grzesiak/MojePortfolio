@@ -25,8 +25,6 @@ export const FloatingNav = ({ className }: { className?: string }) => {
     // Check if current is not undefined and is a number
     if (typeof current === "number") {
       const direction = current! - scrollYProgress.getPrevious()!;
-      console.log("scrollYProgress.get()", scrollYProgress.get());
-      console.log("direction", direction);
 
       if (direction > 0 && scrollYProgress.get() > 0.15) {
         setVisible(false);

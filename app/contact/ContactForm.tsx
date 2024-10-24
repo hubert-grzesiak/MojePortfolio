@@ -23,7 +23,6 @@ const ContactForm: React.FC = () => {
   } = useForm<ContactFormProps>();
 
   const onSubmit: SubmitHandler<ContactFormProps> = (data) => {
-    console.log(data);
     // sendContactEmailAction(data);
     reset();
   };
