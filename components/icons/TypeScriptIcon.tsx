@@ -10,7 +10,7 @@ export function TypeScriptIcon(props: React.ComponentProps<"svg">) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <g clip-path="url(#clip0_3309_705)">
+      <g clipPath="url(#clip0_3309_705)">
         <path
           d="M43.3787 0H8.37866C4.23653 0 0.878662 3.35786 0.878662 7.5V42.5C0.878662 46.6421 4.23653 50 8.37866 50H43.3787C47.5208 50 50.8787 46.6421 50.8787 42.5V7.5C50.8787 3.35786 47.5208 0 43.3787 0Z"
           fill="#778295"
@@ -21,14 +21,14 @@ export function TypeScriptIcon(props: React.ComponentProps<"svg">) {
         />
       </g>
       <defs>
-        <clip-path id="clip0_3309_705">
+        <clipPath id="clip0_3309_705">
           <rect
             width="50"
             height="50"
             fill="white"
             transform="translate(0.878662)"
           />
-        </clip-path>
+        </clipPath>
       </defs>
     </svg>
   );

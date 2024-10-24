@@ -10,7 +10,7 @@ export function MotionIcon(props: React.ComponentProps<"svg">) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <g clip-path="url(#clip0_3309_741)">
+      <g clipPath="url(#clip0_3309_741)">
         <path
           d="M50.0825 0V25L25.0825 50L12.5825 37.5L25.0825 25L50.0825 0Z"
           fill="#778295"
@@ -19,14 +19,14 @@ export function MotionIcon(props: React.ComponentProps<"svg">) {
         <path d="M25.0825 25L0.0825195 50V0L25.0825 25Z" fill="#778295" />
       </g>
       <defs>
-        <clip-path id="clip0_3309_741">
+        <clipPath id="clip0_3309_741">
           <rect
             width="50"
             height="50"
             fill="white"
             transform="translate(0.0825195)"
           />
-        </clip-path>
+        </clipPath>
       </defs>
     </svg>
   );
