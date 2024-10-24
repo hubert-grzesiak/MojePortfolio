@@ -27,12 +27,14 @@ export default function ThemeSwitch() {
     );
 
   return (
-    <Expand
-      toggled={resolvedTheme === "light"}
-      toggle={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-      className="!h-6 !w-6 hover:cursor-pointer [&>svg]:absolute [&>svg]:!h-6 [&>svg]:!w-6"
-      idPrefix="theme-toggle"
-      aria-label="Toggle theme"
-    />
+    <div className="flex h-6 w-6 items-center justify-center">
+      <Expand
+        toggled={resolvedTheme === "light"}
+        toggle={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+        className="!h-6 !w-6 hover:cursor-pointer [&>svg]:!h-6 [&>svg]:!w-6"
+        idPrefix="theme-toggle"
+        aria-label="Toggle theme"
+      />
+    </div>
   );
 }
