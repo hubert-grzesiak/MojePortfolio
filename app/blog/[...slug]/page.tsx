@@ -20,8 +20,6 @@ interface PostPageProps {
 async function getPostFromParams(params: PostPageProps["params"]) {
   const slug = params?.slug?.join("/");
   const post = posts.find((post) => post.slugAsParams === slug);
-  // const incrementViews = cache(increment);
-  // incrementViews(slug);
   return post;
 }
 

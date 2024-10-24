@@ -51,7 +51,7 @@ const nextConfig = {
 };
 const ContentSecurityPolicy = `
     default-src 'self';
-    script-src 'self' 'unsafe-eval' 'unsafe-inline' https://va.vercel-scripts.com;
+    script-src 'self' https://va.vercel-scripts.com;
     style-src 'self' 'unsafe-inline';
     img-src 'self' https://lh3.googleusercontent.com https://res.cloudinary.com https://static.vecteezy.com https://thumbs.dreamstime.com blob: data:;
     media-src 'none';
@@ -66,7 +66,7 @@ const securityHeaders = [
   },
   {
     key: "Referrer-Policy",
-    value: "origin-when-cross-origin",
+    value: "strict-origin-when-cross-origin",
   },
   {
     key: "X-Frame-Options",
