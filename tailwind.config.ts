@@ -67,6 +67,9 @@ const config = {
         },
       },
       boxShadow: {
+        brutalismLight: "4px 4px 0px 0px #000",
+        brutalismDark: "4px 4px 0px 0px #000",
+        brutalismStraight: "0px 6px 0px 0px #000",
         customShadow: "0 5px 20px 0 #0000001A",
         serviceShadow: "0px 1px 20px 0px #E0ECFF",
         serviceIconShadow: "10px 10px 26px 0px #0252CD47",

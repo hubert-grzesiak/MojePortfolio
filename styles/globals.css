@@ -147,6 +147,12 @@ html {
 }
 
 @layer utilities {
+  .brutalism {
+    @apply shadow-brutalismLight border !border-black border-border;
+  }
+  .brutalismv2 {
+    @apply shadow-brutalismStraight border border-black;
+  }
   .mainPhotoLightDim {
     @apply bg-gradient-to-l from-transparent to-[#f3f8ff];
   }

@@ -1,11 +1,17 @@
 import React from "react";
 import Typography from "../Typography";
 import { socials } from "@components/icons/socials";
+import { cn } from "@lib/utils";
 
-const Footer = () => {
+const Footer = ({ className }: { className?: string }) => {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="bg-white-900 px-6 py-[48px] dark:bg-black-200 md:px-[30px] md:py-[52px]">
+    <footer
+      className={cn(
+        "bg-white-900 px-6 py-[48px] dark:bg-black-200 md:px-[30px] md:py-[52px]",
+        className,
+      )}
+    >
       <div className="mx-auto flex w-full max-w-[1270px] flex-col justify-between border-white-800 dark:border-black-300 md:flex-row md:border-t md:pt-8">
         <Typography
           variant={"body-regular"}
