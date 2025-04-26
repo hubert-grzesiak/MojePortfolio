@@ -49,7 +49,7 @@ const WorkExperience = () => {
             <JobCard
               value={"2"}
               title="University of Kalisz"
-              description="IT Student— September 2021 - Present"
+              description="IT Student— September 2021 - March 2025"
               iconUrl="https://res.cloudinary.com/dev6yhoh3/image/upload/v1724132734/portfolio/uniwersytet-kaliski-logo_fuzldo.png"
             />
           </TabsList>
