@@ -3,7 +3,7 @@ import Typography from "@components/shared/Typography";
 import ServiceCard from "@components/v2/home/ServiceCard";
 import { serviceData } from "./data";
 import Image from "next/image";
-import GradientImage from "@//public/images/gradient-brutalism.png";
+import GradientImage from "@//public/images/gradient-brutalism.jpg";
 
 const Service = () => {
   return (

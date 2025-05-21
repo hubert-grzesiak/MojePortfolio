@@ -1,8 +1,8 @@
 import { cn } from "@lib/utils";
 import Image from "next/image";
 import Typography from "@components/shared/Typography";
-import restlyImage from "../../public/images/projects/restly.svg";
-import restlyMobileImage from "../../public/images/projects/restly-mobile.svg";
+import restlyImage from "../../public/images/projects/restly.png";
+import restlyMobileImage from "../../public/images/projects/restly-mobile.png";
 import Link from "next/link";
 
 interface Props extends React.ComponentPropsWithoutRef<"div"> {

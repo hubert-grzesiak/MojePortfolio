@@ -1,7 +1,7 @@
 "use client";
 
 import Typography from "@components/shared/Typography";
-import { DownloadIcon } from "../icons";
+// import { DownloadIcon } from "../icons";
 import {
   Tooltip,
   TooltipContent,
@@ -15,10 +15,11 @@ const ResumeButton = () => {
       as="div"
       className="flex gap-[3px] text-black-200 dark:text-white-900"
       variant={"small-regular"}
+      aria-label="download-button"
     >
-      <TooltipProvider>
+      {/* <TooltipProvider>
         <Tooltip>
-          <TooltipTrigger>
+          <TooltipTrigger aria-label="download-button">
             <a
               href="/RESUME_EN_Hubert_Grzesiak.pdf"
               download="RESUME_Hubert_Grzesiak.pdf"
@@ -30,10 +31,10 @@ const ResumeButton = () => {
             <span>Download Resume</span>
           </TooltipContent>
         </Tooltip>
-      </TooltipProvider>
+      </TooltipProvider> */}
       <TooltipProvider>
         <Tooltip>
-          <TooltipTrigger>
+          <TooltipTrigger aria-label="open-in-a-new-cart-button">
             <a
               className="flex w-full items-center gap-[3px]"
               href="/RESUME_EN_Hubert_Grzesiak.pdf"

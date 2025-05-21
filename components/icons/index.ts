@@ -26,13 +26,12 @@ import { ChallengeArrow } from "./ChallengeArrow";
 import { TickIcon } from "./TickIcon";
 import { CallIcon } from "./CallIcon";
 import { MessageIcon } from "./MessageIcon";
-
 import { DefinitionIcon } from "./process/DefinitionIcon";
 import { DeployIcon } from "./process/DeployIcon";
 import { DesignIcon } from "./process/DesignIcon";
 import { DevelopIcon } from "./process/DevelopIcon";
 import { PlanIcon } from "./process/PlanIcon";
-import { SiMicrosoftsqlserver } from "react-icons/si";
+import { SiMysql } from "react-icons/si";
 import { GsapIcon } from "./GsapIcon";
 
 export const processIcons = [
@@ -110,10 +109,6 @@ export const skillsIcons = [
   {
     name: "Framer Motion",
     icon: MotionIcon,
-  },
-  {
-    name: "SQL Server",
-    icon: SiMicrosoftsqlserver,
   },
   {
     name: "Figma",

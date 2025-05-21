@@ -3,7 +3,7 @@ import ProjectCard from "@components/home/ProjectCard";
 import Typography from "@components/shared/Typography";
 import { ButtonArrow } from "@components/icons";
 import Link from "next/link";
-import GradientImage from "@//public/images/gradient-brutalism.png";
+import GradientImage from "@//public/images/gradient-brutalism.jpg";
 import Image from "next/image";
 
 const FeaturedProjects = () => {

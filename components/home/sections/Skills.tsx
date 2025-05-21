@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { ReactSVGElement } from "react";
 import Typography from "@components/shared/Typography";
 import { skillsIcons } from "@components/icons";
 import { cn } from "@lib/utils";

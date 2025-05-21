@@ -4,13 +4,13 @@ import CopyButton from "@components/v2/home/CopyButton";
 import Image from "next/image";
 import heroImage from "@//public/svgs/hero-image.svg";
 import { cn } from "@lib/utils";
-import GradientImage from "@//public/images/gradient-brutalism.png";
+import GradientImage from "@//public/images/gradient-brutalism.jpg";
 
 const Hero = ({ className }: { className?: string }) => {
   return (
     <section
       className={cn(
-        "shadow-brutalismLight relative w-full overflow-hidden rounded-2xl bg-white-800 px-6 pt-[120px] dark:bg-black-300 md:px-0 md:pt-0",
+        "relative w-full overflow-hidden rounded-2xl bg-white-800 px-6 pt-[120px] shadow-brutalismLight dark:bg-black-300 md:px-0 md:pt-0",
         className,
       )}
     >

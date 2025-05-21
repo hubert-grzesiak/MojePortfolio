@@ -27,7 +27,10 @@ export default function ThemeSwitch() {
     );
 
   return (
-    <div className="flex h-6 w-6 items-center justify-center">
+    <div
+      className="flex h-6 w-6 items-center justify-center"
+      aria-label="switch-theme-button"
+    >
       <Expand
         toggled={resolvedTheme === "light"}
         toggle={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}

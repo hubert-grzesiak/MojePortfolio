@@ -4,7 +4,7 @@ import ctaImage from "@//public/images/CTA.png";
 import { ButtonArrow } from "@components/icons";
 import Link from "next/link";
 import Image from "next/image";
-import GradientImage from "@//public/images/gradient-brutalism.png";
+import GradientImage from "@//public/images/gradient-brutalism.jpg";
 const GetInTouch = () => {
   return (
     <section className="relative w-full rounded-2xl bg-white-900 px-[24px] py-[48px] dark:bg-black-200 md:px-[30px] md:py-[72px]">

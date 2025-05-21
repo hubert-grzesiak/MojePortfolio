@@ -70,6 +70,14 @@ export const FloatingNav = ({ className }: { className?: string }) => {
                   Home
                 </Typography>
               </Link>
+              <Link href="/v2">
+                <Typography
+                  variant={pathname === "/v2" ? "small-bold" : "small-regular"}
+                  className={cn(pathname === "/v2" && "text-gradient")}
+                >
+                  V2
+                </Typography>
+              </Link>
               <Link href="/case-studies">
                 <Typography
                   variant={

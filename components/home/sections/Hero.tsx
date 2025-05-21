@@ -16,7 +16,7 @@ const Hero = ({ className }: { className?: string }) => {
       <div className="relative mx-auto flex w-full max-w-[1270px] flex-col items-center md:mb-[37px] md:flex-row md:pl-[30px] md:pt-[114px] lg:mb-[43px] lg:pt-[119px]">
         <div className="w-full max-w-[580px]">
           <Typography
-            as="h2"
+            as="p"
             className="mb-5 text-[14px] font-semibold leading-[18px] tracking-[6px] text-[#fea92e] md:mb-[17px] md:text-[20px] md:leading-[26px] lg:mb-[27px]"
           >
             HI, I AM HUBERT
@@ -29,7 +29,7 @@ const Hero = ({ className }: { className?: string }) => {
             <span className="highlighted-text">Web Developer</span> <br />
             based in Poland
           </Typography>
-          <Typography className="mb-5 max-w-[510px] text-[12px] leading-[19px] text-white-500 md:mb-[30px] md:text-[18px] md:leading-[29px] lg:mb-[36px]">
+          <Typography className="mb-5 max-w-[510px] text-[12px] leading-[19px] text-white-500 dark:text-white-800/70 md:mb-[30px] md:text-[18px] md:leading-[29px] lg:mb-[36px]">
             Transforming the web one line of code at a time: Crafting
             cutting-edge digital experiences with precision, passion, and a
             profound commitment to excellence
