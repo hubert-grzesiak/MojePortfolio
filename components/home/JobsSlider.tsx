@@ -10,7 +10,7 @@ const JobsSlider = ({ className }: { className: string }) => {
     <div className={cn("h-[25px]", className)}>
       <Slider
         value={[count]}
-        max={2}
+        max={3}
         step={1}
         onValueChange={(value) => setCount(value[0])}
       />

@@ -16,7 +16,7 @@ const JobCard: FC<JobCardProps> = ({
   icon,
   iconUrl = "",
   title = "Helpfind",
-  description = "Frontend Developer— August 2023 - Present",
+  description = "Frontend Developer — January 2023 - January 2025",
   value,
   className,
 }) => {

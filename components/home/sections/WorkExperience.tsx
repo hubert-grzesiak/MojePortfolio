@@ -27,7 +27,7 @@ const WorkExperience = () => {
             <TabsContent value="1">
               <ExperienceDescriptionCard
                 value="1"
-                title="Helpfind Developer"
+                title="Freelancer"
                 description="I am responsible for creating websites and web applications. I work with technologies such as React.js, Next.js, and Tailwind CSS."
                 shortDescription="I develop websites and web apps using React.js, Next.js, and Tailwind CSS."
               />
@@ -35,6 +35,14 @@ const WorkExperience = () => {
             <TabsContent value="2">
               <ExperienceDescriptionCard
                 value="2"
+                title="Helpfind Developer"
+                description="I am responsible for creating websites and web applications. I work with technologies such as React.js, Next.js, and Tailwind CSS."
+                shortDescription="I develop websites and web apps using React.js, Next.js, and Tailwind CSS."
+              />
+            </TabsContent>
+            <TabsContent value="3">
+              <ExperienceDescriptionCard
+                value="3"
                 title="IT Student"
                 description="I am currently studying Information Technology at the University of Kalisz. I am learning about web development and computer science."
                 shortDescription="I am studying Information Technology at the University of Kalisz."
@@ -44,10 +52,16 @@ const WorkExperience = () => {
           <TabsList className="flex h-auto flex-col gap-[35px] bg-transparent md:w-1/2">
             <JobCard
               value={"1"}
-              iconUrl="https://res.cloudinary.com/dev6yhoh3/image/upload/v1723475223/portfolio/helpfind-logo_trnuzu.jpg"
+              title="Freelancer"
+              description="January 2025 - June 2025"
+              iconUrl="https://w7.pngwing.com/pngs/789/872/png-transparent-freelancer-hd-logo.png"
             />
             <JobCard
               value={"2"}
+              iconUrl="https://res.cloudinary.com/dev6yhoh3/image/upload/v1723475223/portfolio/helpfind-logo_trnuzu.jpg"
+            />
+            <JobCard
+              value={"3"}
               title="University of Kalisz"
               description="IT Student— September 2021 - March 2025"
               iconUrl="https://res.cloudinary.com/dev6yhoh3/image/upload/v1724132734/portfolio/uniwersytet-kaliski-logo_fuzldo.png"

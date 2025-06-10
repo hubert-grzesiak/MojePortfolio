@@ -40,6 +40,14 @@ const nextConfig = {
         protocol: "https",
         hostname: "thumbs.dreamstime.com",
       },
+      {
+        protocol: "https",
+        hostname: "uxwing.com",
+      },
+      {
+        protocol: "https",
+        hostname: "w7.pngwing.com",
+      },
     ],
   },
   webpack: (config) => {
