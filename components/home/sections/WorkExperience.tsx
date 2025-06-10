@@ -54,7 +54,7 @@ const WorkExperience = () => {
               value={"1"}
               title="Freelancer"
               description="January 2025 - June 2025"
-              iconUrl="https://w7.pngwing.com/pngs/789/872/png-transparent-freelancer-hd-logo.png"
+              iconUrl="https://res.cloudinary.com/dev6yhoh3/image/upload/v1749570123/freelance_jmcnz3.png"
             />
             <JobCard
               value={"2"}
