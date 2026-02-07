@@ -10,11 +10,11 @@ const Hero = ({ className }: { className?: string }) => {
   return (
     <section
       className={cn(
-        "w-full overflow-hidden bg-white-800 px-6 pt-[120px] dark:bg-black-300 md:px-0 md:pt-0",
+        "w-full overflow-hidden bg-white-800 px-6 pt-[120px] pb-[60px] dark:bg-black-300 md:px-0 md:pt-0",
         className,
       )}
     >
-   <div style={{position: 'absolute', overflow: 'hidden', minHeight: '500px', maxHeight: '700px', width: '100%'}}>
+   <div className="absolute overflow-hidden xl:max-h-[729px] w-full max-h-[563px] min-h-[563px] top-0 left-0 z-[1]" >
   <Ballpit
     count={100}
     gravity={0.01}
@@ -22,10 +22,10 @@ const Hero = ({ className }: { className?: string }) => {
     wallBounce={0.95}
     followCursor={false}
     colors={["#ffae00","#000000","#ffffff"]}
-
+className=""
   />
 </div>
-      <div className="relative mx-auto flex w-full max-w-[1270px] flex-col items-center md:mb-[37px] md:flex-row md:pl-[30px] md:pt-[114px] lg:mb-[43px] lg:pt-[119px]">
+      <div className="relative mx-auto flex w-full max-w-[1270px] flex-col items-center md:mb-[37px] md:flex-row md:pl-[30px] md:pt-[114px] lg:mb-[43px] lg:pt-[119px] z-[2]">
         <div className="w-full max-w-[580px] mx-auto">
           <Typography
             as="p"
