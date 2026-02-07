@@ -14,7 +14,7 @@ const Hero = ({ className }: { className?: string }) => {
         className,
       )}
     >
-   <div className="absolute overflow-hidden xl:max-h-[729px] w-full max-h-[563px] min-h-[563px] top-0 left-0 z-[1]" >
+   <div className="absolute overflow-hidden xl:max-h-[729px] w-full max-h-[563px] min-h-[563px] top-0 left-0 z-[1] pointer-events-none">
   <Ballpit
     count={100}
     gravity={0.01}
