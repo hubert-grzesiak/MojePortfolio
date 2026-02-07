@@ -26,7 +26,7 @@ export default async function BlogPage() {
   return (
     <>
       <AuroraBackgroundDemo />
-      <div className="container max-w-4xl py-6 lg:pb-10">
+      <div className="container max-w-4xl py-6 lg:pb-10 mx-auto">
         <div className="grid grid-cols-12 gap-3">
           <div className="col-span-12 col-start-1 sm:col-span-8">
             <hr />

@@ -18,23 +18,28 @@ const WorkExperience = () => {
         >
           <div className="mb-4 md:mb-0 md:w-1/2">
             <TabsContent value="0">
-              <ExperienceDescriptionCard
+               <ExperienceDescriptionCard
                 value="0"
                 secondDescription="From coding in the late hours to collaborating with talented teams, my career has been a dynamic adventure filled with growth and innovation."
                 shortDescription="Progress and milestones: A simple walkthrough of roles, projects, and achievements in my career."
               />
-            </TabsContent>
-            <TabsContent value="1">
               <ExperienceDescriptionCard
                 value="1"
-                title="Helpfind Developer"
-                description="I am responsible for creating websites and web applications. I work with technologies such as React.js, Next.js, and Tailwind CSS."
-                shortDescription="I develop websites and web apps using React.js, Next.js, and Tailwind CSS."
+                secondDescription="From coding in the late hours to collaborating with talented teams, my career has been a dynamic adventure filled with growth and innovation."
+                shortDescription="Progress and milestones: A simple walkthrough of roles, projects, and achievements in my career."
               />
             </TabsContent>
             <TabsContent value="2">
               <ExperienceDescriptionCard
                 value="2"
+                title="Helpfind Developer"
+                description="I am responsible for creating websites and web applications. I work with technologies such as React.js, Next.js, and Tailwind CSS."
+                shortDescription="I develop websites and web apps using React.js, Next.js, and Tailwind CSS."
+              />
+            </TabsContent>
+            <TabsContent value="3">
+              <ExperienceDescriptionCard
+                value="3"
                 title="IT Student"
                 description="I am currently studying Information Technology at the University of Kalisz. I am learning about web development and computer science."
                 shortDescription="I am studying Information Technology at the University of Kalisz."

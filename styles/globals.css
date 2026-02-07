@@ -1,6 +1,83 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary-light: #0252CD;
+  --color-primary-dark: #428DFF;
+  --color-secondary-custom: #FFBE62;
+  --color-white-900: #FFFFFF;
+  --color-white-800: #F3F8FF;
+  --color-white-500: #6F74A7;
+  --color-black-200: #151E2C;
+  --color-black-300: #192333;
+  --color-black-400: #778295;
+  
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --shadow-brutalismLight: 4px 4px 0px 0px #000;
+  --shadow-brutalismDark: 4px 4px 0px 0px #000;
+  --shadow-brutalismStraight: 0px 6px 0px 0px #000;
+  --shadow-customShadow: 0 5px 20px 0 #0000001A;
+  --shadow-serviceShadow: 0px 1px 20px 0px #E0ECFF;
+  --shadow-serviceIconShadow: 10px 10px 26px 0px #0252CD47;
+  --shadow-serviceDarkShadow: 0px 1px 20px 0px #1F2E48;
+  --shadow-workShadow: 0px 10px 66px 0px #00000012;
+  --shadow-jobShadow: -25px 47px 66px 0px #00000014;
+  --shadow-otherCaseStudyCardLight: 0px 1px 20px 0px #E0ECFF;
+  --shadow-otherCaseStudyCardDark: 0px 3px 30px 0px #1F2C41;
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --background-image-gradient-custom: linear-gradient(180deg, #EF93F9 100%, #C168F6 100%);
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-aurora: aurora 60s linear infinite;
+
+  @keyframes accordion-down {
+    from { height: 0; }
+    to { height: var(--radix-accordion-content-height); }
+  }
+  @keyframes accordion-up {
+    from { height: var(--radix-accordion-content-height); }
+    to { height: 0; }
+  }
+  @keyframes aurora {
+    from { background-position: 50% 50%, 50% 50%; }
+    to { background-position: 350% 50%, 350% 50%; }
+  }
+}
 
 @layer base {
   :root {

@@ -12,13 +12,14 @@ import { ClientSideTableOfContents } from "./ClientSideTableOfContents";
 // import { increment } from "@db/actions";
 
 interface PostPageProps {
-  params: {
+  params: Promise<{
     slug: string[];
-  };
+  }>;
 }
 
 async function getPostFromParams(params: PostPageProps["params"]) {
-  const slug = params?.slug?.join("/");
+  const { slug: slugArray } = await params;
+  const slug = slugArray?.join("/");
   const post = posts.find((post) => post.slugAsParams === slug);
   return post;
 }
@@ -63,9 +64,7 @@ export async function generateMetadata({
   };
 }
 
-export async function generateStaticParams(): Promise<
-  PostPageProps["params"][]
-> {
+export async function generateStaticParams(): Promise<{ slug: string[] }[]> {
   return posts.map((post) => ({ slug: post.slugAsParams.split("/") }));
 }
 

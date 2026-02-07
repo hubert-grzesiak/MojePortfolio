@@ -2,7 +2,6 @@
 import { cn } from "@/lib/utils";
 import Typography from "@components/shared/Typography";
 import { motion } from "framer-motion";
-import React from "react";
 import { AuroraBackground } from "@components/ui/aurora-background";
 
 export function AuroraBackgroundDemo({ className }: { className?: string }) {

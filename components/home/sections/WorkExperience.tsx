@@ -50,10 +50,16 @@ const WorkExperience = () => {
             </TabsContent>
           </div>
           <TabsList className="flex h-auto flex-col gap-[35px] bg-transparent md:w-1/2">
+          <JobCard
+              value={"0"}
+              title="Certifier"
+              description="August 2025 - Now"
+              iconUrl="https://res.cloudinary.com/dibzgjsiw/image/upload/v1770495565/certifier-logo_w6trvq.png"
+            />
             <JobCard
               value={"1"}
               title="Freelancer"
-              description="January 2025 - June 2025"
+              description="January 2025 - July 2025"
               iconUrl="https://res.cloudinary.com/dev6yhoh3/image/upload/v1749570123/freelance_jmcnz3.png"
             />
             <JobCard
