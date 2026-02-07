@@ -2,7 +2,13 @@
 import { useRef, useEffect } from 'react';
 import './Lightning.css';
 
-const Lightning = ({ hue = 230, xOffset = 0, speed = 1, intensity = 1, size = 1 }) => {
+const Lightning = ({ 
+  hue = 230, 
+  xOffset = 0, 
+  speed = 1, 
+  intensity = 1, 
+  size = 1 
+}) => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -10,6 +16,7 @@ const Lightning = ({ hue = 230, xOffset = 0, speed = 1, intensity = 1, size = 1 
     if (!canvas) return;
 
     const resizeCanvas = () => {
+      // Ustawiamy rozdzielczość canvasu na rzeczywiste wymiary elementu
       canvas.width = canvas.clientWidth;
       canvas.height = canvas.clientHeight;
     };
@@ -29,6 +36,9 @@ const Lightning = ({ hue = 230, xOffset = 0, speed = 1, intensity = 1, size = 1 
       }
     `;
 
+    // ZMIANY W FRAGMENT SHADERZE:
+    // 1. Dodano uniform 'uRotation'
+    // 2. Dodano obrót UV w mainImage
     const fragmentShaderSource = `
       precision mediump float;
       uniform vec2 iResolution;
@@ -38,6 +48,7 @@ const Lightning = ({ hue = 230, xOffset = 0, speed = 1, intensity = 1, size = 1 
       uniform float uSpeed;
       uniform float uIntensity;
       uniform float uSize;
+      uniform float uRotation; // <--- NOWY PARAMETR
       
       #define OCTAVE_COUNT 10
 
@@ -92,12 +103,24 @@ const Lightning = ({ hue = 230, xOffset = 0, speed = 1, intensity = 1, size = 1 
       void mainImage( out vec4 fragColor, in vec2 fragCoord ) {
           vec2 uv = fragCoord / iResolution.xy;
           uv = 2.0 * uv - 1.0;
+          
+          // Korekta proporcji ekranu (aby szum nie był rozciągnięty)
           uv.x *= iResolution.x / iResolution.y;
+          
+          // --- OBRÓT ---
+          // Obracamy cały układ współrzędnych o zadany kąt.
+          uv *= rotate2d(uRotation);
+
+          // Przesunięcie wzdłuż błyskawicy (teraz działa w obróconym układzie)
           uv.x += uXOffset;
           
-          uv += 2.0 * fbm(uv * uSize + 0.8 * iTime * uSpeed) - 1.0;
+          // Generowanie szumu
+          float noiseVal = fbm(uv * uSize + 0.8 * iTime * uSpeed);
           
-          float dist = abs(uv.x);
+          // Zniekształcenie osi Y (która teraz jest prostopadła do błyskawicy)
+          float distortedY = uv.y + (noiseVal * 2.0 - 1.0); 
+
+          float dist = abs(distortedY);
           vec3 baseColor = hsv2rgb(vec3(uHue / 360.0, 0.7, 0.8));
           vec3 col = baseColor * pow(mix(0.0, 0.07, hash11(iTime * uSpeed)) / dist, 1.0) * uIntensity;
           col = pow(col, vec3(1.0));
@@ -131,10 +154,6 @@ const Lightning = ({ hue = 230, xOffset = 0, speed = 1, intensity = 1, size = 1 
     gl.attachShader(program, vertexShader);
     gl.attachShader(program, fragmentShader);
     gl.linkProgram(program);
-    if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-      console.error('Program linking error:', gl.getProgramInfoLog(program));
-      return;
-    }
     gl.useProgram(program);
 
     const vertices = new Float32Array([-1, -1, 1, -1, -1, 1, -1, 1, 1, -1, 1, 1]);
@@ -146,6 +165,7 @@ const Lightning = ({ hue = 230, xOffset = 0, speed = 1, intensity = 1, size = 1 
     gl.enableVertexAttribArray(aPosition);
     gl.vertexAttribPointer(aPosition, 2, gl.FLOAT, false, 0, 0);
 
+    // Lokacje uniformów
     const iResolutionLocation = gl.getUniformLocation(program, 'iResolution');
     const iTimeLocation = gl.getUniformLocation(program, 'iTime');
     const uHueLocation = gl.getUniformLocation(program, 'uHue');
@@ -153,11 +173,25 @@ const Lightning = ({ hue = 230, xOffset = 0, speed = 1, intensity = 1, size = 1 
     const uSpeedLocation = gl.getUniformLocation(program, 'uSpeed');
     const uIntensityLocation = gl.getUniformLocation(program, 'uIntensity');
     const uSizeLocation = gl.getUniformLocation(program, 'uSize');
+    const uRotationLocation = gl.getUniformLocation(program, 'uRotation'); // <--- NOWA LOKACJA
 
     const startTime = performance.now();
     const render = () => {
-      resizeCanvas();
+      // Obsługa zmiany rozmiaru okna w trakcie animacji
+      if (canvas.width !== canvas.clientWidth || canvas.height !== canvas.clientHeight) {
+          resizeCanvas();
+      }
+      
       gl.viewport(0, 0, canvas.width, canvas.height);
+      
+      // --- OBLICZANIE KĄTA ---
+      // Aby linia szła od Prawego Górnego do Lewego Dolnego rogu:
+      // Używamy funkcji atan(height / width).
+      // Znak minus jest potrzebny, ponieważ obracamy układ współrzędnych w przeciwną stronę, 
+      // aby obiekt (błyskawica) obrócił się we właściwą.
+      const aspectRatio = canvas.height / canvas.width;
+      const diagonalAngle = -Math.atan(aspectRatio);
+
       gl.uniform2f(iResolutionLocation, canvas.width, canvas.height);
       const currentTime = performance.now();
       gl.uniform1f(iTimeLocation, (currentTime - startTime) / 1000.0);
@@ -166,6 +200,10 @@ const Lightning = ({ hue = 230, xOffset = 0, speed = 1, intensity = 1, size = 1 
       gl.uniform1f(uSpeedLocation, speed);
       gl.uniform1f(uIntensityLocation, intensity);
       gl.uniform1f(uSizeLocation, size);
+      
+      // Przekazujemy obliczony kąt do shadera
+      gl.uniform1f(uRotationLocation, diagonalAngle);
+      
       gl.drawArrays(gl.TRIANGLES, 0, 6);
       requestAnimationFrame(render);
     };
@@ -176,7 +214,7 @@ const Lightning = ({ hue = 230, xOffset = 0, speed = 1, intensity = 1, size = 1 
     };
   }, [hue, xOffset, speed, intensity, size]);
 
-  return <canvas ref={canvasRef} className="lightning-container" />;
+  return <canvas ref={canvasRef} className="lightning-container rounded-[19px]" />;
 };
 
 export default Lightning;

@@ -4,9 +4,11 @@
 @plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:where(.dark, .dark *));
-
+button:hover {
+  cursor: pointer;
+}
 @theme {
-  --color-primary-light: #0252CD;
+  --color-primary-light: #fea92e;
   --color-primary-dark: #428DFF;
   --color-secondary-custom: #FFBE62;
   --color-white-900: #FFFFFF;
