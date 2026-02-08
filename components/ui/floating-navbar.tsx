@@ -48,7 +48,7 @@ export const FloatingNav = ({ className }: { className?: string }) => {
           duration: 0.2,
         }}
         className={cn(
-          "fixed top-0 z-[1000] w-full bg-white-800/60 pt-6 backdrop-blur-[32px] dark:bg-black-300/60 md:pt-9",
+          "fixed top-0 z-[1000] w-full bg-white-800/60 pt-6 pb-3 backdrop-blur-[32px] dark:bg-black-300/60 md:pb-5 md:pt-6",
           className,
         )}
       >
@@ -56,7 +56,7 @@ export const FloatingNav = ({ className }: { className?: string }) => {
           <Image
             src={LogoBlack}
             alt="Hubert Grzesiak logo"
-            className="h-[48px] w-[48px] shrink-0 hover:cursor-pointer"
+            className="max-h-[48px] max-w-[48px] shrink-0 hover:cursor-pointer"
             onClick={() => router.push("/")}
           />
 

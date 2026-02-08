@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import { Button } from "@components/ui/button";
 import { HamburgerIcon } from "@components/icons";
 import LogoBlack from "../../public/images/logo-black.png";
@@ -17,10 +18,11 @@ const MobileMenu = ({
   className?: string;
 }) => {
   const router = useRouter();
+  const [open, setOpen] = useState(false);
 
   return (
     <div className={cn(className)}>
-      <Dialog>
+      <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger asChild>
           <HamburgerIcon className="hover:cursor-pointer dark:[&>path]:fill-white" />
         </DialogTrigger>
@@ -30,11 +32,14 @@ const MobileMenu = ({
               <Image
                 src={LogoBlack}
                 alt="Hubert Grzesiak logo"
-                className="h-[30px] w-[30px] shrink-0 hover:cursor-pointer"
-                onClick={() => router.push("/")}
+                className="max-h-[30px] max-w-[30px] shrink-0 hover:cursor-pointer"
+                onClick={() => {
+                  router.push("/");
+                  setOpen(false);
+                }}
               />{" "}
             </div>
-            <Link href="/">
+            <Link href="/" onClick={() => setOpen(false)}>
               <Typography
                 variant={pathname === "/" ? "small-bold" : "small-regular"}
                 className={cn(
@@ -45,7 +50,7 @@ const MobileMenu = ({
                 Home
               </Typography>
             </Link>
-            <Link href="/case-studies">
+            <Link href="/case-studies" onClick={() => setOpen(false)}>
               <Typography
                 variant={
                   pathname === "/case-studies" ? "small-bold" : "small-regular"
@@ -58,7 +63,7 @@ const MobileMenu = ({
                 Case Studies
               </Typography>
             </Link>
-            <Link href="/contact">
+            <Link href="/contact" onClick={() => setOpen(false)}>
               <Typography
                 variant={
                   pathname === "/contact" ? "small-bold" : "small-regular"
@@ -71,7 +76,7 @@ const MobileMenu = ({
                 Contact
               </Typography>
             </Link>
-            <Link href="/blog">
+            <Link href="/blog" onClick={() => setOpen(false)}>
               <Typography
                 variant={pathname === "/blog" ? "small-bold" : "small-regular"}
                 className={cn(
@@ -86,6 +91,7 @@ const MobileMenu = ({
               className="mt-[12px] block w-full"
               href="/CV_EN_Hubert_Grzesiak.pdf"
               target="_blank"
+              onClick={() => setOpen(false)}
             >
               <Button
                 type="submit"
@@ -102,3 +108,4 @@ const MobileMenu = ({
 };
 
 export default MobileMenu;
+
