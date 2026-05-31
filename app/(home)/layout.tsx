@@ -68,7 +68,12 @@ export const poppins = Poppins({
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html lang="pl" suppressHydrationWarning>
+    <html
+      lang="pl"
+      className="dark"
+      style={{ colorScheme: "dark" }}
+      suppressHydrationWarning
+    >
       <body className={cn(poppins.className, "antialiased")}>
         <Providers>
           <RouteAwareNav />

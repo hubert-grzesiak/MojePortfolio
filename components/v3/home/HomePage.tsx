@@ -149,7 +149,7 @@ const HomePage = () => {
     <main className="min-h-screen overflow-hidden text-white">
       <section className="relative flex min-h-[100svh] flex-col overflow-hidden">
         <LazyVideo
-          className="absolute -top-[4svh] left-0 h-[110%] w-full translate-y-[5svh] object-cover object-bottom opacity-100 sm:-top-[6svh] sm:h-[114%] sm:translate-y-[7svh]"
+          className="absolute -top-[4svh] left-0 h-[110%] w-full translate-y-[5svh] object-cover object-bottom opacity-100 sm:-top-[6svh] sm:h-[114%] sm:translate-y-[4svh]"
           src={videos.heroDesktop}
           sources={[
             {

@@ -208,6 +208,32 @@ button:hover {
 }
 html {
   scroll-behavior: smooth;
+  color-scheme: dark;
+  background: #000;
+  scrollbar-color: #5f6368 #050505;
+}
+
+body {
+  background: #000;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5f6368;
+  border: 3px solid #050505;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7b8086;
 }
 .highlighted-text {
   background: linear-gradient(to right, #fea92e, #fea92e);
