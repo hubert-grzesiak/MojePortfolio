@@ -5,10 +5,11 @@ import { Analytics } from "@vercel/analytics/react";
 import { Poppins } from "next/font/google";
 import { cn } from "@lib/utils";
 import { Toaster } from "@/components/ui/sonner";
-import Footer from "@components/shared/sections/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Providers } from "@app/providers";
-import { FloatingNav } from "@components/ui/floating-navbar";
+import RouteAwareFooter from "@components/shared/RouteAwareFooter";
+import RouteAwareNav from "@components/shared/RouteAwareNav";
+import LiquidGlassFilters from "@components/v3/shared/LiquidGlassFilters";
 
 export const metadata: Metadata = {
   title: "Hubert Grzesiak - Frontend Developer | React, Next.js",
@@ -70,13 +71,14 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <html lang="pl" suppressHydrationWarning>
       <body className={cn(poppins.className, "antialiased")}>
         <Providers>
-          <FloatingNav />
+          <LiquidGlassFilters />
+          <RouteAwareNav />
           {children}
         </Providers>
         <Analytics />
         <SpeedInsights />
         <Toaster />
-        <Footer />
+        <RouteAwareFooter />
       </body>
     </html>
   );

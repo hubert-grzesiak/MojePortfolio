@@ -9,75 +9,95 @@ button:hover {
 }
 @theme {
   --color-primary-light: #fea92e;
-  --color-primary-dark: #428DFF;
-  --color-secondary-custom: #FFBE62;
-  --color-white-900: #FFFFFF;
-  --color-white-800: #F3F8FF;
-  --color-white-500: #6F74A7;
-  --color-black-200: #151E2C;
+  --color-primary-dark: #428dff;
+  --color-secondary-custom: #ffbe62;
+  --color-white-900: #ffffff;
+  --color-white-800: #f3f8ff;
+  --color-white-500: #6f74a7;
+  --color-black-200: #151e2c;
   --color-black-300: #192333;
   --color-black-400: #778295;
-  
+
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
-  
+
   --color-primary: hsl(var(--primary));
   --color-primary-foreground: hsl(var(--primary-foreground));
-  
+
   --color-secondary: hsl(var(--secondary));
   --color-secondary-foreground: hsl(var(--secondary-foreground));
-  
+
   --color-destructive: hsl(var(--destructive));
   --color-destructive-foreground: hsl(var(--destructive-foreground));
-  
+
   --color-muted: hsl(var(--muted));
   --color-muted-foreground: hsl(var(--muted-foreground));
-  
+
   --color-accent: hsl(var(--accent));
   --color-accent-foreground: hsl(var(--accent-foreground));
-  
+
   --color-popover: hsl(var(--popover));
   --color-popover-foreground: hsl(var(--popover-foreground));
-  
+
   --color-card: hsl(var(--card));
   --color-card-foreground: hsl(var(--card-foreground));
 
   --shadow-brutalismLight: 4px 4px 0px 0px #000;
   --shadow-brutalismDark: 4px 4px 0px 0px #000;
   --shadow-brutalismStraight: 0px 6px 0px 0px #000;
-  --shadow-customShadow: 0 5px 20px 0 #0000001A;
-  --shadow-serviceShadow: 0px 1px 20px 0px #E0ECFF;
-  --shadow-serviceIconShadow: 10px 10px 26px 0px #0252CD47;
-  --shadow-serviceDarkShadow: 0px 1px 20px 0px #1F2E48;
+  --shadow-customShadow: 0 5px 20px 0 #0000001a;
+  --shadow-serviceShadow: 0px 1px 20px 0px #e0ecff;
+  --shadow-serviceIconShadow: 10px 10px 26px 0px #0252cd47;
+  --shadow-serviceDarkShadow: 0px 1px 20px 0px #1f2e48;
   --shadow-workShadow: 0px 10px 66px 0px #00000012;
   --shadow-jobShadow: -25px 47px 66px 0px #00000014;
-  --shadow-otherCaseStudyCardLight: 0px 1px 20px 0px #E0ECFF;
-  --shadow-otherCaseStudyCardDark: 0px 3px 30px 0px #1F2C41;
+  --shadow-otherCaseStudyCardLight: 0px 1px 20px 0px #e0ecff;
+  --shadow-otherCaseStudyCardDark: 0px 3px 30px 0px #1f2c41;
 
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
 
-  --background-image-gradient-custom: linear-gradient(180deg, #EF93F9 100%, #C168F6 100%);
+  --background-image-gradient-custom: linear-gradient(
+    180deg,
+    #ef93f9 100%,
+    #c168f6 100%
+  );
 
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
   --animate-aurora: aurora 60s linear infinite;
 
   @keyframes accordion-down {
-    from { height: 0; }
-    to { height: var(--radix-accordion-content-height); }
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
   }
   @keyframes accordion-up {
-    from { height: var(--radix-accordion-content-height); }
-    to { height: 0; }
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
   }
   @keyframes aurora {
-    from { background-position: 50% 50%, 50% 50%; }
-    to { background-position: 350% 50%, 350% 50%; }
+    from {
+      background-position:
+        50% 50%,
+        50% 50%;
+    }
+    to {
+      background-position:
+        350% 50%,
+        350% 50%;
+    }
   }
 }
 
@@ -144,6 +164,108 @@ button:hover {
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .liquid-glass,
+  .liquid-glass-btn {
+    position: relative;
+    overflow: hidden;
+    border: none;
+    isolation: isolate;
+    background: rgba(255, 255, 255, 0.035);
+    box-shadow:
+      0 20px 60px rgba(0, 0, 0, 0.28),
+      inset 2px 2px 0 -2px rgba(255, 255, 255, 0.72),
+      inset 0 0 3px 1px rgba(255, 255, 255, 0.38),
+      inset 0 -18px 36px rgba(255, 255, 255, 0.035);
+    backdrop-filter: blur(14px) saturate(150%);
+    -webkit-backdrop-filter: blur(14px) saturate(150%);
+  }
+
+  .liquid-glass::before,
+  .liquid-glass-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    border-radius: inherit;
+    pointer-events: none;
+    background:
+      linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.18),
+        rgba(255, 255, 255, 0.035) 36%,
+        rgba(255, 255, 255, 0.09) 100%
+      ),
+      rgba(255, 255, 255, 0.075);
+    box-shadow:
+      inset 2px 2px 0 -2px rgba(255, 255, 255, 0.76),
+      inset 0 0 3px 1px rgba(255, 255, 255, 0.48),
+      inset 0 -22px 44px rgba(255, 255, 255, 0.035);
+    transition:
+      background-color 180ms ease,
+      opacity 180ms ease;
+  }
+
+  .liquid-glass::after,
+  .liquid-glass-btn::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    border-radius: inherit;
+    pointer-events: none;
+    background: rgba(255, 255, 255, 0.055);
+    backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0);
+    filter: url("#container-glass");
+    -webkit-filter: url("#container-glass");
+  }
+
+  .liquid-glass-btn::before {
+    background:
+      linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.22),
+        rgba(255, 255, 255, 0.055) 42%,
+        rgba(255, 255, 255, 0.14)
+      ),
+      rgba(255, 255, 255, 0.1);
+  }
+
+  .liquid-glass-btn::after {
+    filter: url("#btn-glass");
+    -webkit-filter: url("#btn-glass");
+  }
+
+  .liquid-glass > *,
+  .liquid-glass-btn > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .liquid-glass:is(a, button),
+  .liquid-glass-btn:is(a, button) {
+    transition:
+      transform 180ms ease,
+      color 180ms ease,
+      opacity 180ms ease;
+  }
+
+  .liquid-glass:is(a, button):hover::before,
+  .liquid-glass-btn:is(a, button):hover::before {
+    background:
+      linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.26),
+        rgba(255, 255, 255, 0.075) 36%,
+        rgba(255, 255, 255, 0.16) 100%
+      ),
+      rgba(255, 255, 255, 0.13);
   }
 }
 
@@ -227,10 +349,10 @@ html {
 
 @layer utilities {
   .brutalism {
-    @apply border !border-black border-border shadow-brutalismLight;
+    @apply border-border shadow-brutalismLight border !border-black;
   }
   .brutalismv2 {
-    @apply border border-black shadow-brutalismStraight;
+    @apply shadow-brutalismStraight border border-black;
   }
   .mainPhotoLightDim {
     @apply bg-gradient-to-l from-transparent to-[#f3f8ff];
@@ -251,4 +373,39 @@ html {
 
 .theme-toggle > svg {
   @apply h-6 w-6;
+}
+
+.contact-modal-content {
+  transform-origin: center center;
+  will-change: opacity, transform;
+}
+
+.contact-modal-content[data-state="open"] {
+  animation: contact-modal-enter 280ms cubic-bezier(0.16, 1, 0.3, 1) both !important;
+}
+
+.contact-modal-content[data-state="closed"] {
+  animation: contact-modal-exit 180ms ease-in both !important;
+}
+
+@keyframes contact-modal-enter {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(calc(-50% + 24px)) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1);
+  }
+}
+
+@keyframes contact-modal-exit {
+  from {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-50%) translateY(calc(-50% + 16px)) scale(0.985);
+  }
 }

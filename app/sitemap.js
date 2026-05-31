@@ -8,7 +8,9 @@ export default async function sitemap() {
 
   const routes = [
     "",
-    "/contact",
+    "/v1",
+    "/v2",
+    "/versions",
     "/case-studies",
     "/case-studies/restly",
     "/blog",

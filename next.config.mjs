@@ -1,15 +1,15 @@
-const isDev = process.argv.indexOf('dev') !== -1;
-const isBuild = process.argv.indexOf('build') !== -1;
+const isDev = process.argv.indexOf("dev") !== -1;
+const isBuild = process.argv.indexOf("build") !== -1;
 if (!process.env.VELITE_STARTED && (isDev || isBuild)) {
-  process.env.VELITE_STARTED = '1';
-  const { build } = await import('velite');
+  process.env.VELITE_STARTED = "1";
+  const { build } = await import("velite");
   await build({ watch: isDev, clean: !isDev });
 }
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   turbopack: {},
-   reactCompiler: true,
+  reactCompiler: true,
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -53,7 +53,7 @@ const nextConfig = {
 const ContentSecurityPolicy = `
     style-src 'self' 'unsafe-inline';
     img-src 'self' https://lh3.googleusercontent.com https://res.cloudinary.com https://static.vecteezy.com https://thumbs.dreamstime.com blob: data:;
-    media-src 'none';
+    media-src 'self' https://d8j0ntlcm91z4.cloudfront.net https://res.cloudinary.com;
     connect-src *;
     font-src 'self' data:;
     frame-src 'self';
