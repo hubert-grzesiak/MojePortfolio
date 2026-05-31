@@ -71,7 +71,6 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <html lang="pl" suppressHydrationWarning>
       <body className={cn(poppins.className, "antialiased")}>
         <Providers>
-          <LiquidGlassFilters />
           <RouteAwareNav />
           {children}
         </Providers>

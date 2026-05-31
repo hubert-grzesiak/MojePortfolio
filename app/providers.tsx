@@ -6,7 +6,7 @@ import { ViewTransitions } from "next-view-transitions";
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <ViewTransitions>
-      <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
         {children}
       </ThemeProvider>
     </ViewTransitions>

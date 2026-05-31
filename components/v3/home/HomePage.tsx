@@ -31,7 +31,8 @@ const cloudinaryVideo = (path: string, width = 1400) =>
   `https://res.cloudinary.com/dibzgjsiw/video/upload/f_auto,q_auto:eco,vc_auto,w_${width}/${path}.mp4`;
 
 const videos = {
-  hero: cloudinaryVideo("v1780251815/hero_wxbcu9", 1920),
+  heroMobile: cloudinaryVideo("v1780251815/hero_wxbcu9", 1200),
+  heroDesktop: cloudinaryVideo("v1780251815/hero_wxbcu9", 2500),
   journey: cloudinaryVideo("v1780251698/journey_tcbbsr", 1600),
   reading: cloudinaryVideo("v1780251695/reading_btzyaz", 1100),
   work: cloudinaryVideo("v1780251693/work_udoefh", 1100),
@@ -148,8 +149,18 @@ const HomePage = () => {
     <main className="min-h-screen overflow-hidden text-white">
       <section className="relative flex min-h-[100svh] flex-col overflow-hidden">
         <LazyVideo
-          className="absolute -top-[4svh] left-0 h-[110%] w-full translate-y-[5svh] object-cover object-bottom opacity-70 sm:-top-[6svh] sm:h-[114%] sm:translate-y-[7svh]"
-          src={videos.hero}
+          className="absolute -top-[4svh] left-0 h-[110%] w-full translate-y-[5svh] object-cover object-bottom opacity-100 sm:-top-[6svh] sm:h-[114%] sm:translate-y-[7svh]"
+          src={videos.heroDesktop}
+          sources={[
+            {
+              src: videos.heroMobile,
+              media: "(max-width: 639px)",
+            },
+            {
+              src: videos.heroDesktop,
+              media: "(min-width: 640px)",
+            },
+          ]}
           eager
           preload="metadata"
         />

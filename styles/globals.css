@@ -168,6 +168,39 @@ button:hover {
 }
 
 @layer components {
+  .liquid-glass {
+    background: rgba(255, 255, 255, 0.01);
+    background-blend-mode: luminosity;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: none;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .liquid-glass::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1.4px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.45) 0%,
+      rgba(255, 255, 255, 0.15) 20%,
+      rgba(255, 255, 255, 0) 40%,
+      rgba(255, 255, 255, 0) 60%,
+      rgba(255, 255, 255, 0.15) 80%,
+      rgba(255, 255, 255, 0.45) 100%
+    );
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
 }
 
 .text-gradient {
@@ -277,8 +310,9 @@ html {
 }
 
 .contact-modal-content {
+  z-index: 1100;
   transform-origin: center center;
-  will-change: opacity, transform;
+  will-change: opacity, transform, translate;
 }
 
 .contact-modal-content[data-state="open"] {
@@ -292,21 +326,25 @@ html {
 @keyframes contact-modal-enter {
   from {
     opacity: 0;
-    transform: translateX(-50%) translateY(calc(-50% + 24px)) scale(0.985);
+    translate: -50% calc(-50% + 24px);
+    transform: scale(0.985);
   }
   to {
     opacity: 1;
-    transform: translateX(-50%) translateY(-50%) scale(1);
+    translate: -50% -50%;
+    transform: scale(1);
   }
 }
 
 @keyframes contact-modal-exit {
   from {
     opacity: 1;
-    transform: translateX(-50%) translateY(-50%) scale(1);
+    translate: -50% -50%;
+    transform: scale(1);
   }
   to {
     opacity: 0;
-    transform: translateX(-50%) translateY(calc(-50% + 16px)) scale(0.985);
+    translate: -50% calc(-50% + 16px);
+    transform: scale(0.985);
   }
 }

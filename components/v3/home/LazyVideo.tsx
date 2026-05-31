@@ -10,6 +10,11 @@ type LazyVideoProps = Omit<
   eager?: boolean;
   preload?: "auto" | "metadata" | "none";
   rootMargin?: string;
+  sources?: Array<{
+    src: string;
+    media?: string;
+    type?: string;
+  }>;
   src: string;
 };
 
@@ -17,6 +22,7 @@ const LazyVideo = ({
   eager = false,
   preload,
   rootMargin = "420px 0px",
+  sources,
   src,
   ...props
 }: LazyVideoProps) => {
@@ -76,14 +82,23 @@ const LazyVideo = ({
   return (
     <video
       ref={videoRef}
-      src={shouldLoad ? src : undefined}
       muted
       loop
       playsInline
       autoPlay={eager || isVisible}
       preload={preload ?? (eager ? "metadata" : "none")}
       {...props}
-    />
+    >
+      {shouldLoad && sources
+        ? sources.map((source) => (
+            <source
+              key={`${source.src}-${source.media ?? "default"}`}
+              {...source}
+            />
+          ))
+        : null}
+      {shouldLoad && !sources ? <source src={src} /> : null}
+    </video>
   );
 };
 
