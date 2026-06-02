@@ -4,6 +4,7 @@ import { cn } from "@lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import LogoBlack from "../../../public/images/logo-black.png";
 
 interface V3NavbarProps {
@@ -21,6 +22,18 @@ const navLinks = [
 
 const V3Navbar = ({ className, inHero = false }: V3NavbarProps) => {
   const pathname = usePathname();
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  useEffect(() => {
+    const updateScrollState = () => {
+      setHasScrolled(window.scrollY > 0);
+    };
+
+    updateScrollState();
+    window.addEventListener("scroll", updateScrollState, { passive: true });
+
+    return () => window.removeEventListener("scroll", updateScrollState);
+  }, []);
 
   return (
     <header
@@ -31,7 +44,10 @@ const V3Navbar = ({ className, inHero = false }: V3NavbarProps) => {
       )}
     >
       <nav
-        className="liquid-glass pointer-events-auto mx-auto flex max-w-[1120px] items-center justify-between gap-4 rounded-full px-3 py-2.5 sm:px-5"
+        className={cn(
+          "liquid-glass pointer-events-auto mx-auto flex max-w-[1120px] items-center justify-between gap-4 rounded-full border border-white/10 px-3 py-2.5 transition-all duration-300 ease-out sm:px-5",
+          hasScrolled && "bg-black/10 backdrop-blur-lg",
+        )}
         aria-label="Primary navigation"
       >
         <Link
@@ -69,7 +85,9 @@ const V3Navbar = ({ className, inHero = false }: V3NavbarProps) => {
         </div>
 
         <a
-          className="liquid-glass relative z-[1] inline-flex h-10 items-center justify-center rounded-full px-4 text-[14px] font-semibold text-white transition-colors hover:bg-white/[0.05]"
+          className={cn(
+            "liquid-glass relative z-[1] inline-flex h-10 items-center justify-center rounded-full border border-white/10 px-4 text-[14px] font-semibold text-white transition-colors hover:bg-white/[0.05]",
+          )}
           href="/RESUME_EN_Hubert_Grzesiak.pdf"
           target="_blank"
           rel="noreferrer"

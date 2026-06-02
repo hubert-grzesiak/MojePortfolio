@@ -19,7 +19,10 @@ type LazyVideoProps = Omit<
 };
 
 const LazyVideo = ({
+  className,
   eager = false,
+  onError,
+  poster,
   preload,
   rootMargin = "420px 0px",
   sources,
@@ -29,6 +32,7 @@ const LazyVideo = ({
   const videoRef = useRef<HTMLVideoElement>(null);
   const [shouldLoad, setShouldLoad] = useState(eager);
   const [isVisible, setIsVisible] = useState(eager);
+  const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
     if (eager) {
@@ -79,8 +83,18 @@ const LazyVideo = ({
     video.pause();
   }, [eager, isVisible, shouldLoad]);
 
+  if (hasError && poster) {
+    return <img aria-hidden="true" alt="" className={className} src={poster} />;
+  }
+
   return (
     <video
+      className={className}
+      onError={(event) => {
+        setHasError(true);
+        onError?.(event);
+      }}
+      poster={poster}
       ref={videoRef}
       muted
       loop

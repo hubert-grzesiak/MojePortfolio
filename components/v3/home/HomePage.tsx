@@ -27,17 +27,24 @@ const instrumentSerif = Instrument_Serif({
   style: ["normal", "italic"],
 });
 
-const cloudinaryVideo = (path: string, width = 1400) =>
-  `https://res.cloudinary.com/dibzgjsiw/video/upload/f_auto,q_auto:eco,vc_auto,w_${width}/${path}.mp4`;
+const cloudinaryVideo = (
+  path: string,
+  width = 1400,
+  quality: "eco" | "good" | "best" = "eco",
+) =>
+  `https://res.cloudinary.com/dibzgjsiw/video/upload/f_auto,q_auto:${quality},vc_auto,w_${width}/${path}.mp4`;
 
 const videos = {
-  heroMobile: cloudinaryVideo("v1780251815/hero_wxbcu9", 1200),
-  heroDesktop: cloudinaryVideo("v1780251815/hero_wxbcu9", 2500),
+  heroMobile: cloudinaryVideo("v1780432001/Heroo_hodcr", 1600, "best"),
+  heroDesktop: cloudinaryVideo("v1780432001/Heroo_hodcrs", 2560, "best"),
   journey: cloudinaryVideo("v1780251698/journey_tcbbsr", 1600),
   reading: cloudinaryVideo("v1780251695/reading_btzyaz", 1100),
   work: cloudinaryVideo("v1780251693/work_udoefh", 1100),
   flowers: cloudinaryVideo("v1780251687/flowers_iib85i", 1100),
 };
+
+const heroVideoPlaceholder =
+  "https://res.cloudinary.com/dibzgjsiw/image/upload/v1780432806/placeholder_1_1_h24mum.png";
 
 const services = [
   {
@@ -162,6 +169,7 @@ const HomePage = () => {
             },
           ]}
           eager
+          poster={heroVideoPlaceholder}
           preload="metadata"
         />
 
