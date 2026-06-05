@@ -1,0 +1,111 @@
+"use client";
+import { useState } from "react";
+import { Button } from "@components/ui/button";
+import { HamburgerIcon } from "@components/icons";
+import LogoBlack from "../../public/images/logo-black.png";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import Typography from "./Typography";
+import { cn } from "@lib/utils";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
+
+const MobileMenu = ({
+  pathname,
+  className,
+}: {
+  pathname: string;
+  className?: string;
+}) => {
+  const router = useRouter();
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className={cn(className)}>
+      <Dialog open={open} onOpenChange={setOpen}>
+        <DialogTrigger asChild>
+          <HamburgerIcon className="hover:cursor-pointer dark:[&>path]:fill-white" />
+        </DialogTrigger>
+        <DialogContent className="w-full max-w-[345px] rounded-[10px]">
+          <div className="flex flex-col gap-2 text-white-500 dark:text-white-800">
+            <div className="mb-[30px]">
+              <Image
+                src={LogoBlack}
+                alt="Hubert Grzesiak logo"
+                className="max-h-[30px] max-w-[30px] shrink-0 hover:cursor-pointer"
+                onClick={() => {
+                  router.push("/");
+                  setOpen(false);
+                }}
+              />{" "}
+            </div>
+            <Link href="/" onClick={() => setOpen(false)}>
+              <Typography
+                variant={pathname === "/" ? "small-bold" : "small-regular"}
+                className={cn(
+                  "rounded-[100px] px-6 py-3 transition-colors hover:bg-[#fea92e]/50 hover:text-black-200",
+                  pathname === "/" && "bg-[#fea92e] text-white-900",
+                )}
+              >
+                Home
+              </Typography>
+            </Link>
+            <Link href="/case-studies" onClick={() => setOpen(false)}>
+              <Typography
+                variant={
+                  pathname === "/case-studies" ? "small-bold" : "small-regular"
+                }
+                className={cn(
+                  "rounded-[100px] px-6 py-3 transition-colors hover:bg-[#fea92e]/50 hover:text-black-200",
+                  pathname === "/case-studies" && "bg-[#fea92e] text-white-900",
+                )}
+              >
+                Case Studies
+              </Typography>
+            </Link>
+            <Link href="/contact" onClick={() => setOpen(false)}>
+              <Typography
+                variant={
+                  pathname === "/contact" ? "small-bold" : "small-regular"
+                }
+                className={cn(
+                  "transition-color rounded-[100px] px-6 py-3 hover:bg-[#fea92e]/50 hover:text-black-200 hover:dark:text-black",
+                  pathname === "/contact" && "bg-[#fea92e] text-white-900",
+                )}
+              >
+                Contact
+              </Typography>
+            </Link>
+            <Link href="/blog" onClick={() => setOpen(false)}>
+              <Typography
+                variant={pathname === "/blog" ? "small-bold" : "small-regular"}
+                className={cn(
+                  "transition-color rounded-[100px] px-6 py-3 hover:bg-[#fea92e]/50 hover:text-black-200 hover:dark:text-black",
+                  pathname === "/blog" && "bg-[#fea92e] text-white-900",
+                )}
+              >
+                Blog
+              </Typography>
+            </Link>
+            <a
+              className="mt-[12px] block w-full"
+              href="/CV_EN_Hubert_Grzesiak.pdf"
+              target="_blank"
+              onClick={() => setOpen(false)}
+            >
+              <Button
+                type="submit"
+                className="w-full rounded-[100px] bg-white-800 text-[14px] font-semibold leading-[20px] tracking-wide text-[#f49818] dark:bg-black-300 hover:dark:bg-black-200"
+              >
+                Resume
+              </Button>
+            </a>
+          </div>
+        </DialogContent>
+      </Dialog>
+    </div>
+  );
+};
+
+export default MobileMenu;
+

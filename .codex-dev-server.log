@@ -1,0 +1,15 @@
+
+> portfolionowe@0.1.0 dev
+> next dev -p 3001
+
+▲ Next.js 16.1.6 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://10.5.0.2:3001
+- Environments: .env
+
+✓ Starting...
+⨯ Unable to acquire lock at C:\Users\vtenn\WebDev\HubertGrzesiakPortfolio\.next\dev\lock, is another instance of next dev running?
+  Suggestion: If you intended to restart next dev, terminate the other process, and then try again.
+[32m[VELITE][0m building... 
+[32m[VELITE][0m build finished in 7151.18ms
+[?25h

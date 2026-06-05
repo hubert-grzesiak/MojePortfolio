@@ -1,10 +1,10 @@
 import React from "react";
-import Divider from "@components/Divider";
+import Divider from "@components/shared/Divider";
 import Image from "next/image";
 
 const Interactions = () => {
   return (
-    <div className="flex flex-col gap-3 my-5 ">
+    <div className="my-5 flex flex-col gap-3">
       <Divider className="h-[0.1px]" />
       <div className="flex justify-around">
         <div className="like">

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Divider from "@components/Divider";
+import Divider from "@components/shared/Divider";
 import Interactions from "./Interactions";
 import { cn } from "@lib/utils";
 
@@ -25,7 +25,7 @@ const Post = ({
     <>
       <div className="post text-sm lg:text-base">
         <div className="post-top">
-          <div className="lg:w-[55px] lg:h-[55px] w-[50px] h-[50px] relative shrink-0">
+          <div className="relative h-[50px] w-[50px] shrink-0 lg:h-[55px] lg:w-[55px]">
             <Image
               src={image}
               width={57}
@@ -48,7 +48,7 @@ const Post = ({
             </div>
           </div>
         </div>
-        <Divider className="mt-4 mb-2" />
+        <Divider className="mb-2 mt-4" />
         <p className="my-2.5 text-left">{description}</p>
         <Interactions />
         <div className="post-bottom">
